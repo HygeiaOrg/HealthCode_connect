@@ -24,7 +24,7 @@ app.add_middleware(
 @app.get("/")
 def read_root():
     # Show if Xero credentials are configured
-    xero_configured = bool(os.getenv("CA2FA153D004D76A7F335D6C1E3A04B") and os.getenv("XERO_CLIENT_SECRET"))
+    xero_configured = bool(os.getenv("XERO_CLIENT_ID") and os.getenv("XERO_CLIENT_SECRET"))
     return {
         "message": "HealthCode Connect Backend is running!",
         "xero_integration_configured": xero_configured
