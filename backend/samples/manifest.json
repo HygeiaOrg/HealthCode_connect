@@ -1,0 +1,75 @@
+[
+  {
+    "file": "valid_01_bupa_consult.pdf",
+    "expect_valid": true,
+    "expected_rules": [],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "valid_02_wpa_daycase.pdf",
+    "expect_valid": true,
+    "expected_rules": [],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "valid_03_aviva_gastroscopy.pdf",
+    "expect_valid": true,
+    "expected_rules": [],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "valid_04_vitality_lesion.pdf",
+    "expect_valid": true,
+    "expected_rules": [],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "valid_05_nhs_session.pdf",
+    "expect_valid": true,
+    "expected_rules": [],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "invalid_01_postcode_nhs.pdf",
+    "expect_valid": false,
+    "expected_rules": [
+      "format.nhs_number",
+      "format.postcode"
+    ],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "invalid_02_wpa_membership.pdf",
+    "expect_valid": false,
+    "expected_rules": [
+      "format.membership"
+    ],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "invalid_03_vitality_preauth_setting.pdf",
+    "expect_valid": false,
+    "expected_rules": [
+      "cross.setting_procedure",
+      "format.preauth"
+    ],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "invalid_04_missing_membership.pdf",
+    "expect_valid": false,
+    "expected_rules": [
+      "structural.required"
+    ],
+    "pdf_roundtrip_ok": true
+  },
+  {
+    "file": "invalid_05_tariff_unknown_icd.pdf",
+    "expect_valid": false,
+    "expected_rules": [
+      "cross.tariff",
+      "dict.icd10"
+    ],
+    "pdf_roundtrip_ok": true
+  }
+]
