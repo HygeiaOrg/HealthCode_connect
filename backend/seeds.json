@@ -1,0 +1,17 @@
+[
+  {
+    "id": "item-001",
+    "title": "Build Frontend UI",
+    "status": "pending"
+  },
+  {
+    "id": "item-002",
+    "title": "Setup Backend Server",
+    "status": "active"
+  },
+  {
+    "id": "item-003",
+    "title": "Design System Architecture",
+    "status": "completed"
+  }
+]

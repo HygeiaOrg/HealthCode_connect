@@ -1,0 +1,8 @@
+{
+  "name": "hackathon-frontend",
+  "version": "1.0.0",
+  "description": "Frontend workspace for Hackathon POC",
+  "scripts": {
+    "dev": "echo 'Initialize your Vite or Next.js app here!'"
+  }
+}

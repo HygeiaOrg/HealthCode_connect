@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hackathon API Contract",
+  "description": "Shared schema defining the data structure between frontend and backend.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "title": { "type": "string" },
+      "status": { "type": "string", "enum": ["pending", "active", "completed"] }
+    },
+    "required": ["id", "title", "status"]
+  }
+}
