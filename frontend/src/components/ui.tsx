@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom'
 import type { Invoice, PipelineStatus, PipelineTotal } from '../api/types'
 import { daysInStage, isLive, stageMeta } from '../lib/pipeline'
-import { groupTriage } from '../lib/triage'
 import { gbp } from '../lib/format'
 
 export function StatusChip({ invoice }: { invoice: Invoice }) {
@@ -28,24 +26,6 @@ export function StatusChip({ invoice }: { invoice: Invoice }) {
 export function PayerChip({ invoice }: { invoice: Invoice }) {
   const nhs = invoice.payer_type === 'nhs'
   return <span className={`chip ${nhs ? 'payer-nhs' : 'payer-private'}`}>{invoice.insurer_name}</span>
-}
-
-export function KpiCard(props: {
-  label: string
-  value: string
-  note?: string
-  delta?: { text: string; good: boolean }
-}) {
-  return (
-    <div className="card">
-      <div className="row spread">
-        <div className="kpi-num">{props.value}</div>
-        {props.delta && <span className={`delta ${props.delta.good ? 'good' : 'bad'}`}>{props.delta.text}</span>}
-      </div>
-      <div className="kpi-label">{props.label}</div>
-      {props.note && <div className="kpi-note">{props.note}</div>}
-    </div>
-  )
 }
 
 export function PipelineBar(props: {
@@ -75,36 +55,6 @@ export function PipelineBar(props: {
           </button>
         )
       })}
-    </div>
-  )
-}
-
-const SEV_CLS = { critical: 'crit', serious: 'serious', warning: 'warn', info: 'info' } as const
-
-/** Triage summary for the Overview: one row per blocker group, linking into the Fix queue. */
-export function ActionQueue({ invoices }: { invoices: Invoice[] }) {
-  const groups = groupTriage(invoices)
-  if (!groups.length)
-    return (
-      <div className="empty">
-        <div className="big" aria-hidden>✓</div>
-        <b>No invoices need attention</b>
-        Everything in flight is inside its SLA and nothing came back with errors.
-      </div>
-    )
-  return (
-    <div>
-      {groups.map((g) => (
-        <div className="queue-item" key={g.meta.kind}>
-          <span className={`queue-count ${SEV_CLS[g.meta.severity]}`}>{g.rows.length}</span>
-          <span className="qtext">
-            <b>{g.meta.title}</b> · {gbp(g.total)} held up
-          </span>
-          <Link to="/fix" className="rowaction" style={{ textDecoration: 'none' }}>
-            Fix
-          </Link>
-        </div>
-      ))}
     </div>
   )
 }
