@@ -1,26 +1,26 @@
 import { Link } from 'react-router-dom'
 import type { Invoice, PipelineStatus, PipelineTotal } from '../api/types'
-import { daysInStage, isOverdue, isStale, stageMeta } from '../lib/pipeline'
+import { daysInStage, isLive, stageMeta } from '../lib/pipeline'
+import { groupTriage } from '../lib/triage'
 import { gbp } from '../lib/format'
 
 export function StatusChip({ invoice }: { invoice: Invoice }) {
   const meta = stageMeta(invoice.pipeline_status)
   const days = daysInStage(invoice)
-  const suffix = invoice.pipeline_status !== 'paid' && invoice.pipeline_status !== 'rejected' && days > 7 ? ` · ${days}d` : ''
+  const suffix = isLive(invoice) && days > 7 ? ` · ${days}d` : ''
   const cls =
-    invoice.pipeline_status === 'paid' ? 'paid' : invoice.pipeline_status === 'rejected' ? 'rejected' : 'stage'
+    invoice.pipeline_status === 'paid'
+      ? 'paid'
+      : invoice.pipeline_status === 'rejected'
+        ? 'rejected'
+        : invoice.pipeline_status === 'insurer_query'
+          ? 'query'
+          : 'stage'
   return (
-    <span className="row" style={{ gap: 6 }}>
-      <span className={`chip ${cls}`}>
-        <span className="ico" aria-hidden>{meta.icon}</span>
-        {meta.label}
-        {suffix}
-      </span>
-      {isOverdue(invoice) && (
-        <span className="chip overdue">
-          <span className="ico" aria-hidden>!</span>Overdue
-        </span>
-      )}
+    <span className={`chip ${cls}`}>
+      <span className="ico" aria-hidden>{meta.icon}</span>
+      {meta.label}
+      {suffix}
     </span>
   )
 }
@@ -79,67 +79,29 @@ export function PipelineBar(props: {
   )
 }
 
+const SEV_CLS = { critical: 'crit', serious: 'serious', warning: 'warn', info: 'info' } as const
+
+/** Triage summary for the Overview: one row per blocker group, linking into the Fix queue. */
 export function ActionQueue({ invoices }: { invoices: Invoice[] }) {
-  const rejected = invoices.filter((i) => i.pipeline_status === 'rejected')
-  const stale = invoices.filter(isStale)
-  const overdue = invoices.filter(isOverdue)
-  const drafts = invoices.filter((i) => i.pipeline_status === 'draft')
-
-  const rows: { count: number; cls: string; text: JSX.Element; to: string }[] = []
-  if (rejected.length)
-    rows.push({
-      count: rejected.length,
-      cls: 'crit',
-      text: (
-        <>
-          <b>Rejected</b> with validation issues to fix: {gbp(rejected.reduce((s, i) => s + i.total, 0))} held up
-        </>
-      ),
-      to: '/invoices?status=rejected',
-    })
-  if (overdue.length)
-    rows.push({
-      count: overdue.length,
-      cls: 'warn',
-      text: (
-        <>
-          <b>Past expected payment date</b>: {gbp(overdue.reduce((s, i) => s + i.amount_due, 0))} to chase
-        </>
-      ),
-      to: '/invoices?flag=overdue',
-    })
-  if (stale.length)
-    rows.push({
-      count: stale.length,
-      cls: 'warn',
-      text: <><b>No movement for 14+ days</b> at their current stage</>,
-      to: '/invoices?flag=stale',
-    })
-  if (drafts.length)
-    rows.push({
-      count: drafts.length,
-      cls: 'info',
-      text: <><b>Drafts</b> never submitted to Healthcode</>,
-      to: '/invoices?status=draft',
-    })
-
-  if (!rows.length)
+  const groups = groupTriage(invoices)
+  if (!groups.length)
     return (
       <div className="empty">
         <div className="big" aria-hidden>✓</div>
         <b>No invoices need attention</b>
-        Everything in flight is moving and nothing is overdue.
+        Everything in flight is inside its SLA and nothing came back with errors.
       </div>
     )
-
   return (
     <div>
-      {rows.map((r, i) => (
-        <div className="queue-item" key={i}>
-          <span className={`queue-count ${r.cls}`}>{r.count}</span>
-          <span className="qtext">{r.text}</span>
-          <Link to={r.to} className="rowaction" style={{ textDecoration: 'none' }}>
-            View
+      {groups.map((g) => (
+        <div className="queue-item" key={g.meta.kind}>
+          <span className={`queue-count ${SEV_CLS[g.meta.severity]}`}>{g.rows.length}</span>
+          <span className="qtext">
+            <b>{g.meta.title}</b> · {gbp(g.total)} held up
+          </span>
+          <Link to="/fix" className="rowaction" style={{ textDecoration: 'none' }}>
+            Fix
           </Link>
         </div>
       ))}

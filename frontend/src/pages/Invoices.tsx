@@ -3,7 +3,8 @@ import { useQuery } from '@tanstack/react-query'
 import { useSearchParams } from 'react-router-dom'
 import { api } from '../api/client'
 import type { PayerType, PipelineStatus } from '../api/types'
-import { isOverdue, isStale, STAGES } from '../lib/pipeline'
+import { STAGES } from '../lib/pipeline'
+import { triage } from '../lib/triage'
 import { EmptyState, PipelineBar, Skeleton } from '../components/ui'
 import { InvoiceTable } from '../components/invoices'
 
@@ -16,7 +17,7 @@ export default function Invoices() {
   const statusParam = params.get('status')
   const status = statusParam && VALID_STATUS.has(statusParam as PipelineStatus) ? (statusParam as PipelineStatus) : null
   const payer = params.get('payer') as PayerType | null
-  const flag = params.get('flag') // overdue | stale
+  const stuckOnly = params.get('stuck') === '1'
 
   const invoices = useQuery({ queryKey: ['invoices', {}], queryFn: () => api.invoices() })
   const summary = useQuery({ queryKey: ['summary'], queryFn: api.summary })
@@ -25,8 +26,7 @@ export default function Invoices() {
     let rows = invoices.data ?? []
     if (status) rows = rows.filter((i) => i.pipeline_status === status)
     if (payer) rows = rows.filter((i) => i.payer_type === payer)
-    if (flag === 'overdue') rows = rows.filter(isOverdue)
-    if (flag === 'stale') rows = rows.filter(isStale)
+    if (stuckOnly) rows = rows.filter((i) => triage(i) != null)
     if (q) {
       const needle = q.toLowerCase()
       rows = rows.filter(
@@ -37,20 +37,22 @@ export default function Invoices() {
       )
     }
     return rows
-  }, [invoices.data, status, payer, flag, q])
+  }, [invoices.data, status, payer, stuckOnly, q])
 
   const setParam = (key: string, value: string | null) => {
     const next = new URLSearchParams(params)
     if (value == null) next.delete(key)
     else next.set(key, value)
-    if (key !== 'flag') next.delete('flag')
     setParams(next, { replace: true })
   }
 
   return (
     <>
       <h1 className="page-title">Invoices</h1>
-      <p className="page-sub">Every invoice with its live pipeline position. Click a row for the full timeline.</p>
+      <p className="page-sub">
+        Every invoice with its live pipeline position. Click a row for the full timeline; anything flagged is
+        one click from its fix.
+      </p>
 
       {summary.data && (
         <PipelineBar
@@ -61,8 +63,16 @@ export default function Invoices() {
       )}
 
       <div className="filters">
-        <button className={`fbtn ${!payer ? 'on' : ''}`} onClick={() => setParam('payer', null)}>
-          All payers
+        <button
+          className={`fbtn ${!payer && !stuckOnly ? 'on' : ''}`}
+          onClick={() => {
+            const next = new URLSearchParams(params)
+            next.delete('payer')
+            next.delete('stuck')
+            setParams(next, { replace: true })
+          }}
+        >
+          All
         </button>
         <button
           className={`fbtn ${payer === 'private_insurer' ? 'on' : ''}`}
@@ -76,11 +86,9 @@ export default function Invoices() {
         >
           NHS
         </button>
-        {flag && (
-          <button className="fbtn on" onClick={() => setParam('flag', null)}>
-            {flag === 'overdue' ? 'Past expected date' : 'Stale 14d+'} ✕
-          </button>
-        )}
+        <button className={`fbtn ${stuckOnly ? 'on' : ''}`} onClick={() => setParam('stuck', stuckOnly ? null : '1')}>
+          Stuck only
+        </button>
         <span style={{ flex: 1 }} />
         <input
           className="search"
@@ -100,7 +108,7 @@ export default function Invoices() {
           <EmptyState
             icon="🔍"
             title="No invoices match"
-            body="Clear a filter above, or change the search. Rejected and overdue work lives under Needs attention on the Overview."
+            body="Clear a filter above or change the search. Everything stuck also lives in the Fix queue."
           />
         )}
       </div>

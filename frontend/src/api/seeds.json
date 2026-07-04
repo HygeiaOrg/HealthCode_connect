@@ -1,118 +1,34 @@
 [
   {
-    "id": "inv_0075",
+    "id": "inv_0046",
     "invoice_number": "INV-2026-0001",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "L.W-9903",
+    "patient_ref": "E.E-8202",
     "description": "NHS surgical list",
     "total": 480.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
     "issued_date": "2026-01-05",
-    "submitted_date": "2026-01-08",
-    "expected_payment_date": "2026-02-04",
-    "paid_date": "2026-02-07",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-05"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-05"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-08"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-10"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-07"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0106",
-    "invoice_number": "INV-2026-0002",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "A.C-9691",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-01-06",
-    "submitted_date": "2026-01-09",
-    "expected_payment_date": "2026-02-04",
-    "paid_date": "2026-02-02",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-06"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-06"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-09"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-10"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-02"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0110",
-    "invoice_number": "INV-2026-0003",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "M.C-7505",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
-    "issued_date": "2026-01-06",
-    "submitted_date": "2026-01-09",
-    "expected_payment_date": "2026-02-25",
+    "submitted_date": "2026-01-05",
+    "expected_payment_date": "2026-02-06",
     "paid_date": "2026-02-14",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-01-06"
+        "at": "2026-01-05"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-01-06"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-09"
+        "stage": "at_medserv",
+        "at": "2026-01-05"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-01-11"
+        "at": "2026-01-07"
       },
       {
         "stage": "paid",
@@ -123,324 +39,308 @@
     "source": "seed"
   },
   {
-    "id": "inv_0053",
-    "invoice_number": "INV-2026-0004",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "J.W-8921",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
-    "issued_date": "2026-01-08",
-    "submitted_date": "2026-01-11",
-    "expected_payment_date": "2026-02-27",
-    "paid_date": "2026-03-11",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-08"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-08"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-11"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-13"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-11"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0097",
-    "invoice_number": "INV-2026-0005",
+    "id": "inv_0054",
+    "invoice_number": "INV-2026-0002",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "D.C-8802",
+    "patient_ref": "W.F-9221",
     "description": "NHS clinic session",
     "total": 320.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-01-08",
-    "submitted_date": "2026-01-10",
-    "expected_payment_date": "2026-02-05",
-    "paid_date": "2026-02-03",
+    "issued_date": "2026-01-07",
+    "submitted_date": "2026-01-07",
+    "expected_payment_date": "2026-02-09",
+    "paid_date": "2026-02-12",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-01-08"
+        "at": "2026-01-07"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-01-08"
+        "stage": "at_medserv",
+        "at": "2026-01-07"
       },
       {
-        "stage": "at_healthcode",
+        "stage": "with_insurer",
         "at": "2026-01-10"
       },
       {
-        "stage": "with_insurer",
-        "at": "2026-01-11"
-      },
-      {
         "stage": "paid",
-        "at": "2026-02-03"
+        "at": "2026-02-12"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0057",
-    "invoice_number": "INV-2026-0006",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "W.L-6764",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-01-09",
-    "submitted_date": "2026-01-11",
-    "expected_payment_date": "2026-02-09",
-    "paid_date": "2026-02-04",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-09"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-09"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-11"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-15"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-04"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0068",
-    "invoice_number": "INV-2026-0007",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "T.R-5557",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-01-11",
-    "submitted_date": "2026-01-13",
-    "expected_payment_date": "2026-02-08",
-    "paid_date": "2026-02-05",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-11"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-11"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-13"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-14"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-05"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0034",
-    "invoice_number": "INV-2026-0008",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "D.N-4114",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-01-14",
-    "submitted_date": "2026-01-16",
-    "expected_payment_date": "2026-02-13",
-    "paid_date": "2026-02-11",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-14"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-14"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-16"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-19"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-11"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0111",
-    "invoice_number": "INV-2026-0009",
+    "id": "inv_0007",
+    "invoice_number": "INV-2026-0003",
     "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "L.F-8538",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
-    "issued_date": "2026-01-15",
-    "submitted_date": "2026-01-18",
-    "expected_payment_date": "2026-03-08",
-    "paid_date": "2026-03-13",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-15"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-15"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-18"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-22"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-13"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0005",
-    "invoice_number": "INV-2026-0010",
-    "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "F.M-6820",
+    "insurer_name": "Bupa",
+    "patient_ref": "C.G-7629",
     "description": "Minor procedure",
     "total": 450.0,
     "amount_due": 0.0,
     "middleman_fee": 13.5,
     "currency": "GBP",
-    "issued_date": "2026-01-16",
-    "submitted_date": "2026-01-19",
-    "expected_payment_date": "2026-03-08",
-    "paid_date": "2026-03-18",
+    "issued_date": "2026-01-09",
+    "submitted_date": "2026-01-12",
+    "expected_payment_date": "2026-02-19",
+    "paid_date": "2026-03-03",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-01-16"
+        "at": "2026-01-09"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-01-16"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-19"
+        "stage": "at_medserv",
+        "at": "2026-01-12"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-01-22"
+        "at": "2026-01-15"
       },
       {
         "stage": "paid",
-        "at": "2026-03-18"
+        "at": "2026-03-03"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0039",
-    "invoice_number": "INV-2026-0011",
+    "id": "inv_0055",
+    "invoice_number": "INV-2026-0004",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "M.M-8870",
+    "description": "Medical report",
+    "total": 120.0,
+    "amount_due": 0.0,
+    "middleman_fee": 3.6,
+    "currency": "GBP",
+    "issued_date": "2026-01-09",
+    "submitted_date": "2026-01-12",
+    "expected_payment_date": "2026-02-25",
+    "paid_date": "2026-02-10",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-09"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-01-12"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-01-16"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-02-10"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0104",
+    "invoice_number": "INV-2026-0005",
+    "payer_type": "private_insurer",
+    "insurer_name": "WPA",
+    "patient_ref": "P.W-3696",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 0.0,
+    "middleman_fee": 13.5,
+    "currency": "GBP",
+    "issued_date": "2026-01-09",
+    "submitted_date": "2026-01-11",
+    "expected_payment_date": "2026-02-11",
+    "paid_date": "2026-03-04",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-09"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-01-11"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-01-12"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-04"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0031",
+    "invoice_number": "INV-2026-0006",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "A.J-5093",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 0.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-01-10",
+    "submitted_date": "2026-01-11",
+    "expected_payment_date": "2026-02-18",
+    "paid_date": "2026-02-24",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-10"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-01-11"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-01-14"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-02-24"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0028",
+    "invoice_number": "INV-2026-0007",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "N.S-7547",
+    "patient_ref": "W.D-7822",
     "description": "NHS surgical list",
     "total": 480.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-01-16",
-    "submitted_date": "2026-01-19",
+    "issued_date": "2026-01-13",
+    "submitted_date": "2026-01-15",
     "expected_payment_date": "2026-02-17",
-    "paid_date": "2026-02-08",
+    "paid_date": "2026-02-12",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-01-16"
+        "at": "2026-01-13"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-01-16"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-19"
+        "stage": "at_medserv",
+        "at": "2026-01-15"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-01-23"
+        "at": "2026-01-18"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-02-12"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0078",
+    "invoice_number": "INV-2026-0008",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "G.S-6061",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 62.5,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-01-13",
+    "submitted_date": "2026-01-16",
+    "expected_payment_date": "2026-02-23",
+    "paid_date": "2026-03-02",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-13"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-01-16"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-01-19"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-02"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0001",
+    "invoice_number": "INV-2026-0009",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "M.W-8111",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-01-14",
+    "submitted_date": "2026-01-17",
+    "expected_payment_date": "2026-02-19",
+    "paid_date": "2026-02-08",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-14"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-01-17"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-01-20"
       },
       {
         "stage": "paid",
@@ -451,98 +351,30 @@
     "source": "seed"
   },
   {
-    "id": "inv_0060",
-    "invoice_number": "INV-2026-0012",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "K.S-8843",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 900.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-01-16",
-    "submitted_date": null,
-    "expected_payment_date": null,
-    "paid_date": null,
-    "pipeline_status": "draft",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-16"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0013",
-    "invoice_number": "INV-2026-0013",
+    "id": "inv_0103",
+    "invoice_number": "INV-2026-0010",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "W.F-5342",
+    "patient_ref": "G.T-3014",
     "description": "NHS clinic session",
     "total": 320.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-01-19",
-    "submitted_date": "2026-01-19",
-    "expected_payment_date": "2026-02-15",
-    "paid_date": "2026-02-20",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-19"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-19"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-19"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-21"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-20"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0022",
-    "invoice_number": "INV-2026-0014",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "F.C-2113",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-01-19",
+    "issued_date": "2026-01-20",
     "submitted_date": "2026-01-20",
-    "expected_payment_date": "2026-02-15",
-    "paid_date": "2026-02-11",
+    "expected_payment_date": "2026-02-20",
+    "paid_date": "2026-02-01",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-01-19"
+        "at": "2026-01-20"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-01-19"
-      },
-      {
-        "stage": "at_healthcode",
+        "stage": "at_medserv",
         "at": "2026-01-20"
       },
       {
@@ -551,39 +383,37 @@
       },
       {
         "stage": "paid",
-        "at": "2026-02-11"
+        "at": "2026-02-01"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0100",
-    "invoice_number": "INV-2026-0015",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "D.D-4522",
-    "description": "NHS surgical list",
-    "total": 480.0,
+    "id": "inv_0107",
+    "invoice_number": "INV-2026-0011",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "B.A-2119",
+    "description": "Minor procedure",
+    "total": 450.0,
     "amount_due": 0.0,
-    "middleman_fee": 0.0,
+    "middleman_fee": 13.5,
     "currency": "GBP",
-    "issued_date": "2026-01-21",
+    "issued_date": "2026-01-23",
     "submitted_date": "2026-01-24",
-    "expected_payment_date": "2026-02-21",
-    "paid_date": "2026-02-15",
+    "expected_payment_date": "2026-03-08",
+    "paid_date": "2026-02-24",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-01-21"
+        "at": "2026-01-23"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-01-21"
-      },
-      {
-        "stage": "at_healthcode",
+        "stage": "at_medserv",
         "at": "2026-01-24"
       },
       {
@@ -592,6 +422,333 @@
       },
       {
         "stage": "paid",
+        "at": "2026-02-24"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0073",
+    "invoice_number": "INV-2026-0012",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "J.S-5182",
+    "description": "NHS surgical list",
+    "total": 480.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-01-24",
+    "submitted_date": "2026-01-24",
+    "expected_payment_date": "2026-02-24",
+    "paid_date": "2026-03-01",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-24"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-01-24"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-01-25"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-01"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0086",
+    "invoice_number": "INV-2026-0013",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "B.G-7266",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 0.0,
+    "middleman_fee": 13.5,
+    "currency": "GBP",
+    "issued_date": "2026-01-24",
+    "submitted_date": "2026-01-25",
+    "expected_payment_date": "2026-03-14",
+    "paid_date": "2026-04-05",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-24"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-01-25"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-01-28"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-05"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0050",
+    "invoice_number": "INV-2026-0014",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "B.K-8389",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 0.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-01-25",
+    "submitted_date": "2026-01-27",
+    "expected_payment_date": "2026-03-05",
+    "paid_date": "2026-03-07",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-25"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-01-27"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-01-29"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-07"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0019",
+    "invoice_number": "INV-2026-0015",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "S.S-2249",
+    "description": "NHS surgical list",
+    "total": 480.0,
+    "amount_due": 480.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-01-29",
+    "submitted_date": null,
+    "expected_payment_date": null,
+    "paid_date": null,
+    "pipeline_status": "draft",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-29"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0040",
+    "invoice_number": "INV-2026-0016",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "M.C-8132",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 0.0,
+    "middleman_fee": 13.5,
+    "currency": "GBP",
+    "issued_date": "2026-01-29",
+    "submitted_date": "2026-02-01",
+    "expected_payment_date": "2026-03-22",
+    "paid_date": "2026-03-08",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-29"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-02-01"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-02-05"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-08"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0097",
+    "invoice_number": "INV-2026-0017",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "F.N-5454",
+    "description": "NHS surgical list",
+    "total": 480.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-01-29",
+    "submitted_date": "2026-02-01",
+    "expected_payment_date": "2026-03-06",
+    "paid_date": "2026-03-02",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-29"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-02-01"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-02-04"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-02"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0045",
+    "invoice_number": "INV-2026-0018",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "F.A-8147",
+    "description": "NHS surgical list",
+    "total": 480.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-01-30",
+    "submitted_date": "2026-02-01",
+    "expected_payment_date": "2026-03-05",
+    "paid_date": "2026-02-19",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-30"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-02-01"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-02-03"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-02-19"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0071",
+    "invoice_number": "INV-2026-0019",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "R.P-3206",
+    "description": "NHS surgical list",
+    "total": 480.0,
+    "amount_due": 480.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-01-31",
+    "submitted_date": null,
+    "expected_payment_date": null,
+    "paid_date": null,
+    "pipeline_status": "draft",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-01-31"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0010",
+    "invoice_number": "INV-2026-0020",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "P.G-7172",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 450.0,
+    "middleman_fee": 13.5,
+    "currency": "GBP",
+    "issued_date": "2026-02-02",
+    "submitted_date": "2026-02-05",
+    "expected_payment_date": "2026-03-16",
+    "paid_date": null,
+    "pipeline_status": "insurer_query",
+    "query_reason": "Insurer requests the referring GP's details.",
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-02-02"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-02-05"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-02-09"
+      },
+      {
+        "stage": "insurer_query",
         "at": "2026-02-15"
       }
     ],
@@ -600,303 +757,30 @@
   },
   {
     "id": "inv_0102",
-    "invoice_number": "INV-2026-0016",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "E.W-1982",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-01-22",
-    "submitted_date": "2026-01-22",
-    "expected_payment_date": "2026-02-20",
-    "paid_date": "2026-02-14",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-22"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-22"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-22"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-26"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-14"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0049",
-    "invoice_number": "INV-2026-0017",
+    "invoice_number": "INV-2026-0021",
     "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "G.A-3496",
-    "description": "Medical report",
-    "total": 120.0,
-    "amount_due": 0.0,
-    "middleman_fee": 3.6,
-    "currency": "GBP",
-    "issued_date": "2026-01-25",
-    "submitted_date": "2026-01-25",
-    "expected_payment_date": "2026-03-12",
-    "paid_date": "2026-03-18",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-01-25"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-25"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-25"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-01-26"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-18"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0078",
-    "invoice_number": "INV-2026-0018",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "C.S-5342",
+    "insurer_name": "WPA",
+    "patient_ref": "G.K-5938",
     "description": "Diagnostic review",
     "total": 320.0,
-    "amount_due": 0.0,
+    "amount_due": 80.0,
     "middleman_fee": 9.6,
     "currency": "GBP",
-    "issued_date": "2026-01-30",
-    "submitted_date": "2026-01-31",
-    "expected_payment_date": "2026-03-21",
-    "paid_date": "2026-02-20",
+    "issued_date": "2026-02-04",
+    "submitted_date": "2026-02-07",
+    "expected_payment_date": "2026-03-11",
+    "paid_date": "2026-03-09",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-01-30"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-01-30"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-01-31"
-      },
-      {
-        "stage": "with_insurer",
         "at": "2026-02-04"
       },
       {
-        "stage": "paid",
-        "at": "2026-02-20"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0027",
-    "invoice_number": "INV-2026-0019",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "B.C-7939",
-    "description": "Follow-up consultation",
-    "total": 150.0,
-    "amount_due": 0.0,
-    "middleman_fee": 4.5,
-    "currency": "GBP",
-    "issued_date": "2026-02-01",
-    "submitted_date": "2026-02-02",
-    "expected_payment_date": "2026-03-22",
-    "paid_date": "2026-02-25",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-01"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-01"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-02"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-05"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-25"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0029",
-    "invoice_number": "INV-2026-0020",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "B.M-4441",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-02",
-    "submitted_date": "2026-02-03",
-    "expected_payment_date": "2026-03-04",
-    "paid_date": "2026-02-20",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-02"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-02"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-03"
-      },
-      {
-        "stage": "with_insurer",
+        "stage": "at_medserv",
         "at": "2026-02-07"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-02-20"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0092",
-    "invoice_number": "INV-2026-0021",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "W.P-3531",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-03",
-    "submitted_date": "2026-02-06",
-    "expected_payment_date": "2026-03-07",
-    "paid_date": "2026-03-01",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-03"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-03"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-06"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-10"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-01"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0067",
-    "invoice_number": "INV-2026-0022",
-    "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "P.L-5102",
-    "description": "Minor procedure",
-    "total": 450.0,
-    "amount_due": 450.0,
-    "middleman_fee": 13.5,
-    "currency": "GBP",
-    "issued_date": "2026-02-05",
-    "submitted_date": null,
-    "expected_payment_date": null,
-    "paid_date": null,
-    "pipeline_status": "draft",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-05"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0072",
-    "invoice_number": "INV-2026-0023",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "C.H-2858",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-05",
-    "submitted_date": "2026-02-06",
-    "expected_payment_date": "2026-03-06",
-    "paid_date": "2026-02-28",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-05"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-05"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-06"
       },
       {
         "stage": "with_insurer",
@@ -904,310 +788,193 @@
       },
       {
         "stage": "paid",
-        "at": "2026-02-28"
+        "at": "2026-03-09"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0047",
-    "invoice_number": "INV-2026-0024",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "R.F-1823",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 0.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-06",
-    "submitted_date": "2026-02-06",
-    "expected_payment_date": "2026-03-24",
-    "paid_date": "2026-03-03",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-06"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-06"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-06"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-07"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-03"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0089",
-    "invoice_number": "INV-2026-0025",
-    "payer_type": "private_insurer",
-    "insurer_name": "Vitality",
-    "patient_ref": "W.D-8451",
-    "description": "Follow-up consultation",
-    "total": 150.0,
-    "amount_due": 150.0,
-    "middleman_fee": 4.5,
-    "currency": "GBP",
-    "issued_date": "2026-02-10",
-    "submitted_date": null,
-    "expected_payment_date": null,
-    "paid_date": null,
-    "pipeline_status": "draft",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-10"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0096",
-    "invoice_number": "INV-2026-0026",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "D.A-3159",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 0.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-11",
-    "submitted_date": "2026-02-12",
-    "expected_payment_date": "2026-03-31",
-    "paid_date": "2026-04-29",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-11"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-11"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-12"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-14"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-04-29"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0114",
-    "invoice_number": "INV-2026-0027",
+    "id": "inv_0025",
+    "invoice_number": "INV-2026-0022",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "S.R-8354",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-11",
-    "submitted_date": "2026-02-12",
-    "expected_payment_date": "2026-03-10",
-    "paid_date": "2026-03-13",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-11"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-11"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-12"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-13"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-13"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0012",
-    "invoice_number": "INV-2026-0028",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "M.K-4923",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-13",
-    "submitted_date": "2026-02-13",
-    "expected_payment_date": "2026-03-13",
-    "paid_date": "2026-03-15",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-13"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-13"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-13"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-16"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-15"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0026",
-    "invoice_number": "INV-2026-0029",
-    "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "E.J-2891",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 0.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-14",
-    "submitted_date": "2026-02-14",
-    "expected_payment_date": "2026-04-03",
-    "paid_date": "2026-03-31",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-14"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-14"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-14"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-17"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-31"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0064",
-    "invoice_number": "INV-2026-0030",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "S.K-1534",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-02-14",
-    "submitted_date": "2026-02-15",
-    "expected_payment_date": "2026-03-13",
-    "paid_date": "2026-03-12",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-14"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-14"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-15"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-16"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-12"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0082",
-    "invoice_number": "INV-2026-0031",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "R.J-8529",
+    "patient_ref": "T.C-2869",
     "description": "NHS surgical list",
     "total": 480.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-02-17",
-    "submitted_date": "2026-02-18",
-    "expected_payment_date": "2026-03-19",
-    "paid_date": "2026-03-21",
+    "issued_date": "2026-02-05",
+    "submitted_date": "2026-02-08",
+    "expected_payment_date": "2026-03-12",
+    "paid_date": "2026-02-20",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-02-17"
+        "at": "2026-02-05"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-02-17"
+        "stage": "at_medserv",
+        "at": "2026-02-08"
       },
       {
-        "stage": "at_healthcode",
+        "stage": "with_insurer",
+        "at": "2026-02-10"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-02-20"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0038",
+    "invoice_number": "INV-2026-0023",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "L.B-1526",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 0.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-02-05",
+    "submitted_date": "2026-02-07",
+    "expected_payment_date": "2026-03-16",
+    "paid_date": "2026-03-07",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-02-05"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-02-07"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-02-09"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-07"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0074",
+    "invoice_number": "INV-2026-0024",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "B.C-8938",
+    "description": "Medical report",
+    "total": 120.0,
+    "amount_due": 0.0,
+    "middleman_fee": 3.6,
+    "currency": "GBP",
+    "issued_date": "2026-02-05",
+    "submitted_date": "2026-02-08",
+    "expected_payment_date": "2026-03-18",
+    "paid_date": "2026-03-16",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-02-05"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-02-08"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-02-11"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-16"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0036",
+    "invoice_number": "INV-2026-0025",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "N.L-5856",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 0.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-02-12",
+    "submitted_date": "2026-02-14",
+    "expected_payment_date": "2026-03-27",
+    "paid_date": "2026-03-14",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-02-12"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-02-14"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-02-15"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-03-14"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0052",
+    "invoice_number": "INV-2026-0026",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "M.E-4774",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-02-18",
+    "submitted_date": "2026-02-18",
+    "expected_payment_date": "2026-03-24",
+    "paid_date": "2026-03-24",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-02-18"
+      },
+      {
+        "stage": "at_medserv",
         "at": "2026-02-18"
       },
       {
@@ -1216,130 +983,46 @@
       },
       {
         "stage": "paid",
-        "at": "2026-03-21"
+        "at": "2026-03-24"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0069",
-    "invoice_number": "INV-2026-0032",
-    "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "F.L-7744",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
-    "issued_date": "2026-02-20",
-    "submitted_date": "2026-02-22",
-    "expected_payment_date": "2026-04-12",
-    "paid_date": "2026-03-30",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-20"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-20"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-22"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-02-26"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-30"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0024",
-    "invoice_number": "INV-2026-0033",
+    "id": "inv_0060",
+    "invoice_number": "INV-2026-0027",
     "payer_type": "private_insurer",
     "insurer_name": "Bupa",
-    "patient_ref": "L.C-1152",
-    "description": "Minor procedure",
-    "total": 450.0,
-    "amount_due": 0.0,
-    "middleman_fee": 13.5,
-    "currency": "GBP",
-    "issued_date": "2026-02-26",
-    "submitted_date": "2026-03-01",
-    "expected_payment_date": "2026-04-17",
-    "paid_date": "2026-04-03",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-26"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-26"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-01"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-03"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-04-03"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0006",
-    "invoice_number": "INV-2026-0034",
-    "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "R.N-5422",
+    "patient_ref": "J.T-2137",
     "description": "Medical report",
     "total": 120.0,
     "amount_due": 0.0,
     "middleman_fee": 3.6,
     "currency": "GBP",
-    "issued_date": "2026-02-27",
-    "submitted_date": "2026-02-27",
-    "expected_payment_date": "2026-04-15",
-    "paid_date": "2026-03-17",
+    "issued_date": "2026-02-21",
+    "submitted_date": "2026-02-21",
+    "expected_payment_date": "2026-04-01",
+    "paid_date": "2026-03-30",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-02-27"
+        "at": "2026-02-21"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-02-27"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-02-27"
+        "stage": "at_medserv",
+        "at": "2026-02-21"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-03-01"
+        "at": "2026-02-25"
       },
       {
         "stage": "paid",
-        "at": "2026-03-17"
+        "at": "2026-03-30"
       }
     ],
     "validation_issues": [],
@@ -1347,236 +1030,134 @@
   },
   {
     "id": "inv_0008",
-    "invoice_number": "INV-2026-0035",
+    "invoice_number": "INV-2026-0028",
     "payer_type": "private_insurer",
-    "insurer_name": "Vitality",
-    "patient_ref": "W.W-5304",
-    "description": "Diagnostic review",
+    "insurer_name": "AXA Health",
+    "patient_ref": "H.K-4636",
+    "description": "Major procedure",
+    "total": 900.0,
+    "amount_due": 900.0,
+    "middleman_fee": 27.0,
+    "currency": "GBP",
+    "issued_date": "2026-02-23",
+    "submitted_date": "2026-02-26",
+    "expected_payment_date": "2026-04-10",
+    "paid_date": null,
+    "pipeline_status": "insurer_query",
+    "query_reason": "Insurer requests the pre-authorisation reference for this treatment.",
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-02-23"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-02-26"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-03-01"
+      },
+      {
+        "stage": "insurer_query",
+        "at": "2026-03-09"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0022",
+    "invoice_number": "INV-2026-0029",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "T.H-5245",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 150.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-02-25",
+    "submitted_date": null,
+    "expected_payment_date": null,
+    "paid_date": null,
+    "pipeline_status": "draft",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-02-25"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0067",
+    "invoice_number": "INV-2026-0030",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "J.C-5164",
+    "description": "NHS clinic session",
     "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
-    "issued_date": "2026-02-28",
-    "submitted_date": "2026-03-03",
-    "expected_payment_date": "2026-04-19",
-    "paid_date": "2026-03-23",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-28"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-28"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-03"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-05"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-23"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0104",
-    "invoice_number": "INV-2026-0036",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "D.J-4705",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
+    "amount_due": 320.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
     "issued_date": "2026-02-28",
-    "submitted_date": "2026-03-01",
-    "expected_payment_date": "2026-03-27",
-    "paid_date": "2026-03-30",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-02-28"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-02-28"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-01"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-02"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-30"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0107",
-    "invoice_number": "INV-2026-0037",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "B.C-5458",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-03-01",
-    "submitted_date": "2026-03-03",
-    "expected_payment_date": "2026-03-29",
-    "paid_date": "2026-03-25",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-01"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-01"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-03"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-04"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-25"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0032",
-    "invoice_number": "INV-2026-0038",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "H.A-4164",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-03-02",
-    "submitted_date": "2026-03-04",
-    "expected_payment_date": "2026-04-01",
-    "paid_date": "2026-03-25",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-02"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-02"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-04"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-07"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-25"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0046",
-    "invoice_number": "INV-2026-0039",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "N.F-8657",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-03-02",
-    "submitted_date": "2026-03-02",
+    "submitted_date": "2026-02-28",
     "expected_payment_date": "2026-03-31",
-    "paid_date": "2026-04-01",
-    "pipeline_status": "paid",
+    "paid_date": null,
+    "pipeline_status": "insurer_query",
+    "query_reason": "Insurer requests the pre-authorisation reference for this treatment.",
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-03-02"
+        "at": "2026-02-28"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-03-02"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-02"
+        "stage": "at_medserv",
+        "at": "2026-02-28"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-03-06"
+        "at": "2026-03-01"
       },
       {
-        "stage": "paid",
-        "at": "2026-04-01"
+        "stage": "insurer_query",
+        "at": "2026-03-09"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0065",
-    "invoice_number": "INV-2026-0040",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "G.P-2880",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
+    "id": "inv_0113",
+    "invoice_number": "INV-2026-0031",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "W.F-6220",
+    "description": "Major procedure",
+    "total": 900.0,
+    "amount_due": 225.0,
+    "middleman_fee": 27.0,
     "currency": "GBP",
-    "issued_date": "2026-03-05",
+    "issued_date": "2026-03-03",
     "submitted_date": "2026-03-06",
-    "expected_payment_date": "2026-04-03",
+    "expected_payment_date": "2026-04-13",
     "paid_date": "2026-03-31",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-03-05"
+        "at": "2026-03-03"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-03-05"
-      },
-      {
-        "stage": "at_healthcode",
+        "stage": "at_medserv",
         "at": "2026-03-06"
       },
       {
@@ -1592,119 +1173,120 @@
     "source": "seed"
   },
   {
-    "id": "inv_0050",
-    "invoice_number": "INV-2026-0041",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "F.D-3683",
-    "description": "NHS clinic session",
-    "total": 320.0,
+    "id": "inv_0094",
+    "invoice_number": "INV-2026-0032",
+    "payer_type": "private_insurer",
+    "insurer_name": "WPA",
+    "patient_ref": "P.W-9970",
+    "description": "Major procedure",
+    "total": 900.0,
+    "amount_due": 900.0,
+    "middleman_fee": 27.0,
+    "currency": "GBP",
+    "issued_date": "2026-03-06",
+    "submitted_date": "2026-03-09",
+    "expected_payment_date": "2026-04-11",
+    "paid_date": null,
+    "pipeline_status": "rejected",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-06"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-09"
+      },
+      {
+        "stage": "rejected",
+        "at": "2026-03-13"
+      }
+    ],
+    "validation_issues": [
+      {
+        "field": "Diagnosis Code",
+        "error": "Must be specified",
+        "solution": "Enter an ICD-10 diagnosis code before resubmitting."
+      },
+      {
+        "field": "Membership Number",
+        "error": "Does not match insurer records",
+        "solution": "Confirm the patient's policy number with the insurer and update the invoice."
+      }
+    ],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0017",
+    "invoice_number": "INV-2026-0033",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "T.G-5275",
+    "description": "Minor procedure",
+    "total": 450.0,
     "amount_due": 0.0,
-    "middleman_fee": 0.0,
+    "middleman_fee": 13.5,
     "currency": "GBP",
     "issued_date": "2026-03-07",
-    "submitted_date": "2026-03-08",
-    "expected_payment_date": "2026-04-06",
-    "paid_date": "2026-04-05",
+    "submitted_date": "2026-03-07",
+    "expected_payment_date": "2026-04-18",
+    "paid_date": "2026-04-12",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
         "at": "2026-03-07"
       },
       {
-        "stage": "at_semble",
+        "stage": "at_medserv",
         "at": "2026-03-07"
       },
       {
-        "stage": "at_healthcode",
-        "at": "2026-03-08"
-      },
-      {
         "stage": "with_insurer",
-        "at": "2026-03-12"
+        "at": "2026-03-09"
       },
       {
         "stage": "paid",
-        "at": "2026-04-05"
+        "at": "2026-04-12"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0040",
-    "invoice_number": "INV-2026-0042",
+    "id": "inv_0088",
+    "invoice_number": "INV-2026-0034",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "T.R-1822",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-03-08",
-    "submitted_date": "2026-03-08",
-    "expected_payment_date": "2026-04-06",
-    "paid_date": "2026-03-29",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-08"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-08"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-08"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-12"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-03-29"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0035",
-    "invoice_number": "INV-2026-0043",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "L.L-3041",
+    "patient_ref": "H.L-9370",
     "description": "NHS surgical list",
     "total": 480.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-03-11",
-    "submitted_date": "2026-03-12",
-    "expected_payment_date": "2026-04-09",
+    "issued_date": "2026-03-09",
+    "submitted_date": "2026-03-09",
+    "expected_payment_date": "2026-04-11",
     "paid_date": "2026-04-22",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-03-11"
+        "at": "2026-03-09"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-03-11"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-12"
+        "stage": "at_medserv",
+        "at": "2026-03-09"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-03-15"
+        "at": "2026-03-12"
       },
       {
         "stage": "paid",
@@ -1715,326 +1297,74 @@
     "source": "seed"
   },
   {
-    "id": "inv_0083",
-    "invoice_number": "INV-2026-0044",
+    "id": "inv_0115",
+    "invoice_number": "INV-2026-0035",
     "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "P.J-8484",
+    "insurer_name": "AXA Health",
+    "patient_ref": "S.B-8651",
     "description": "Diagnostic review",
     "total": 320.0,
     "amount_due": 0.0,
     "middleman_fee": 9.6,
     "currency": "GBP",
-    "issued_date": "2026-03-11",
-    "submitted_date": "2026-03-14",
-    "expected_payment_date": "2026-05-01",
-    "paid_date": "2026-04-20",
+    "issued_date": "2026-03-09",
+    "submitted_date": "2026-03-12",
+    "expected_payment_date": "2026-04-25",
+    "paid_date": "2026-04-25",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-03-11"
+        "at": "2026-03-09"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-03-11"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-14"
+        "stage": "at_medserv",
+        "at": "2026-03-12"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-03-17"
+        "at": "2026-03-16"
       },
       {
         "stage": "paid",
-        "at": "2026-04-20"
+        "at": "2026-04-25"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0048",
-    "invoice_number": "INV-2026-0045",
+    "id": "inv_0021",
+    "invoice_number": "INV-2026-0036",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "J.P-5133",
+    "patient_ref": "C.H-2710",
     "description": "NHS clinic session",
     "total": 320.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-03-12",
-    "submitted_date": "2026-03-15",
-    "expected_payment_date": "2026-04-12",
-    "paid_date": "2026-04-16",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-12"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-12"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-15"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-18"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-04-16"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0011",
-    "invoice_number": "INV-2026-0046",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "K.T-4258",
-    "description": "Minor procedure",
-    "total": 450.0,
-    "amount_due": 0.0,
-    "middleman_fee": 13.5,
-    "currency": "GBP",
-    "issued_date": "2026-03-14",
-    "submitted_date": "2026-03-16",
-    "expected_payment_date": "2026-05-02",
-    "paid_date": "2026-04-11",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-14"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-14"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-16"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-18"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-04-11"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0088",
-    "invoice_number": "INV-2026-0047",
-    "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "D.R-2233",
-    "description": "Minor procedure",
-    "total": 450.0,
-    "amount_due": 0.0,
-    "middleman_fee": 13.5,
-    "currency": "GBP",
-    "issued_date": "2026-03-15",
-    "submitted_date": "2026-03-18",
-    "expected_payment_date": "2026-05-05",
-    "paid_date": "2026-05-04",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-15"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-15"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-18"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-21"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-04"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0028",
-    "invoice_number": "INV-2026-0048",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "P.W-1158",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-03-16",
-    "submitted_date": "2026-03-17",
-    "expected_payment_date": "2026-04-14",
-    "paid_date": "2026-04-07",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-16"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-16"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-17"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-20"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-04-07"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0109",
-    "invoice_number": "INV-2026-0049",
-    "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "K.L-2965",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 900.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-03-18",
-    "submitted_date": "2026-03-21",
-    "expected_payment_date": "2026-05-06",
-    "paid_date": null,
-    "pipeline_status": "rejected",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-18"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-18"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-21"
-      },
-      {
-        "stage": "rejected",
-        "at": "2026-03-23"
-      }
-    ],
-    "validation_issues": [
-      {
-        "field": "Membership Number",
-        "error": "Does not match insurer records",
-        "solution": "Confirm the patient's policy number with the insurer and update the invoice."
-      }
-    ],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0036",
-    "invoice_number": "INV-2026-0050",
-    "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "N.F-5930",
-    "description": "Medical report",
-    "total": 120.0,
-    "amount_due": 0.0,
-    "middleman_fee": 3.6,
-    "currency": "GBP",
-    "issued_date": "2026-03-22",
-    "submitted_date": "2026-03-25",
-    "expected_payment_date": "2026-05-12",
-    "paid_date": "2026-05-05",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-03-22"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-03-22"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-25"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-03-28"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-05"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0084",
-    "invoice_number": "INV-2026-0051",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "K.K-1359",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-03-23",
-    "submitted_date": "2026-03-26",
-    "expected_payment_date": "2026-04-21",
+    "issued_date": "2026-03-13",
+    "submitted_date": "2026-03-13",
+    "expected_payment_date": "2026-04-15",
     "paid_date": "2026-04-17",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-03-23"
+        "at": "2026-03-13"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-03-23"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-26"
+        "stage": "at_medserv",
+        "at": "2026-03-13"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-03-27"
+        "at": "2026-03-16"
       },
       {
         "stage": "paid",
@@ -2046,36 +1376,112 @@
   },
   {
     "id": "inv_0051",
-    "invoice_number": "INV-2026-0052",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "H.D-5941",
-    "description": "NHS clinic session",
-    "total": 320.0,
+    "invoice_number": "INV-2026-0037",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "M.N-4455",
+    "description": "Medical report",
+    "total": 120.0,
     "amount_due": 0.0,
-    "middleman_fee": 0.0,
+    "middleman_fee": 3.6,
     "currency": "GBP",
-    "issued_date": "2026-03-25",
-    "submitted_date": "2026-03-28",
-    "expected_payment_date": "2026-04-26",
-    "paid_date": "2026-05-02",
+    "issued_date": "2026-03-13",
+    "submitted_date": "2026-03-13",
+    "expected_payment_date": "2026-05-01",
+    "paid_date": "2026-04-19",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-03-25"
+        "at": "2026-03-13"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-03-25"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-03-28"
+        "stage": "at_medserv",
+        "at": "2026-03-13"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-04-01"
+        "at": "2026-03-17"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-19"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0044",
+    "invoice_number": "INV-2026-0038",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "M.T-7301",
+    "description": "NHS surgical list",
+    "total": 480.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-03-15",
+    "submitted_date": "2026-03-16",
+    "expected_payment_date": "2026-04-18",
+    "paid_date": "2026-04-14",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-15"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-16"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-03-19"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-14"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0023",
+    "invoice_number": "INV-2026-0039",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "G.R-8157",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 0.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-03-17",
+    "submitted_date": "2026-03-19",
+    "expected_payment_date": "2026-05-02",
+    "paid_date": "2026-05-02",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-17"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-19"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-03-23"
       },
       {
         "stage": "paid",
@@ -2086,156 +1492,460 @@
     "source": "seed"
   },
   {
-    "id": "inv_0018",
-    "invoice_number": "INV-2026-0053",
+    "id": "inv_0027",
+    "invoice_number": "INV-2026-0040",
     "payer_type": "private_insurer",
     "insurer_name": "Bupa",
-    "patient_ref": "R.H-2235",
-    "description": "Initial consultation",
-    "total": 250.0,
+    "patient_ref": "M.R-6029",
+    "description": "Major procedure",
+    "total": 900.0,
     "amount_due": 0.0,
-    "middleman_fee": 7.5,
+    "middleman_fee": 27.0,
     "currency": "GBP",
-    "issued_date": "2026-04-01",
-    "submitted_date": "2026-04-02",
-    "expected_payment_date": "2026-05-21",
-    "paid_date": "2026-05-03",
+    "issued_date": "2026-03-18",
+    "submitted_date": "2026-03-18",
+    "expected_payment_date": "2026-04-23",
+    "paid_date": "2026-04-17",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-04-01"
+        "at": "2026-03-18"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-04-01"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-02"
+        "stage": "at_medserv",
+        "at": "2026-03-18"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-04-06"
+        "at": "2026-03-19"
       },
       {
         "stage": "paid",
-        "at": "2026-05-03"
+        "at": "2026-04-17"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0079",
-    "invoice_number": "INV-2026-0054",
+    "id": "inv_0020",
+    "invoice_number": "INV-2026-0041",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "M.A-2348",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-03-19",
+    "submitted_date": "2026-03-22",
+    "expected_payment_date": "2026-04-22",
+    "paid_date": "2026-04-13",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-19"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-22"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-03-23"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-13"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0101",
+    "invoice_number": "INV-2026-0042",
     "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "S.W-1588",
+    "insurer_name": "Bupa",
+    "patient_ref": "H.S-1747",
+    "description": "Major procedure",
+    "total": 900.0,
+    "amount_due": 0.0,
+    "middleman_fee": 27.0,
+    "currency": "GBP",
+    "issued_date": "2026-03-19",
+    "submitted_date": "2026-03-22",
+    "expected_payment_date": "2026-04-28",
+    "paid_date": "2026-04-26",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-19"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-22"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-03-24"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-26"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0064",
+    "invoice_number": "INV-2026-0043",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "R.B-9880",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-03-22",
+    "submitted_date": "2026-03-25",
+    "expected_payment_date": "2026-04-27",
+    "paid_date": "2026-05-04",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-22"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-25"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-03-28"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-04"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0105",
+    "invoice_number": "INV-2026-0044",
+    "payer_type": "private_insurer",
+    "insurer_name": "WPA",
+    "patient_ref": "R.A-6984",
     "description": "Diagnostic review",
     "total": 320.0,
     "amount_due": 0.0,
     "middleman_fee": 9.6,
     "currency": "GBP",
-    "issued_date": "2026-04-01",
-    "submitted_date": "2026-04-04",
-    "expected_payment_date": "2026-05-22",
-    "paid_date": "2026-05-31",
+    "issued_date": "2026-03-24",
+    "submitted_date": "2026-03-25",
+    "expected_payment_date": "2026-04-28",
+    "paid_date": "2026-05-15",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-04-01"
+        "at": "2026-03-24"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-04-01"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-04"
+        "stage": "at_medserv",
+        "at": "2026-03-25"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-04-07"
+        "at": "2026-03-29"
       },
       {
         "stage": "paid",
-        "at": "2026-05-31"
+        "at": "2026-05-15"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0113",
-    "invoice_number": "INV-2026-0055",
+    "id": "inv_0041",
+    "invoice_number": "INV-2026-0045",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "E.H-2684",
-    "description": "NHS clinic session",
-    "total": 320.0,
+    "patient_ref": "K.G-8041",
+    "description": "NHS surgical list",
+    "total": 480.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-04-01",
-    "submitted_date": "2026-04-02",
-    "expected_payment_date": "2026-04-30",
-    "paid_date": "2026-05-07",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-01"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-01"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-02"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-05"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-07"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0003",
-    "invoice_number": "INV-2026-0056",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "J.B-8527",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-02",
-    "submitted_date": "2026-04-02",
+    "issued_date": "2026-03-25",
+    "submitted_date": "2026-03-28",
     "expected_payment_date": "2026-05-01",
-    "paid_date": "2026-05-05",
+    "paid_date": "2026-04-24",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-04-02"
+        "at": "2026-03-25"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-04-02"
+        "stage": "at_medserv",
+        "at": "2026-03-28"
       },
       {
-        "stage": "at_healthcode",
-        "at": "2026-04-02"
+        "stage": "with_insurer",
+        "at": "2026-04-01"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-24"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0053",
+    "invoice_number": "INV-2026-0046",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "H.R-1765",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-03-25",
+    "submitted_date": "2026-03-25",
+    "expected_payment_date": "2026-04-27",
+    "paid_date": "2026-04-18",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-25"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-25"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-03-28"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-18"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0068",
+    "invoice_number": "INV-2026-0047",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "P.K-6270",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 250.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-03-26",
+    "submitted_date": "2026-03-26",
+    "expected_payment_date": "2026-05-14",
+    "paid_date": null,
+    "pipeline_status": "insurer_query",
+    "query_reason": "Insurer requests the pre-authorisation reference for this treatment.",
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-26"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-26"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-03-30"
+      },
+      {
+        "stage": "insurer_query",
+        "at": "2026-04-08"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0087",
+    "invoice_number": "INV-2026-0048",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "E.E-1988",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 0.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-03-27",
+    "submitted_date": "2026-03-30",
+    "expected_payment_date": "2026-05-11",
+    "paid_date": "2026-05-14",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-27"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-30"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-01"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-14"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0043",
+    "invoice_number": "INV-2026-0049",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "K.W-8284",
+    "description": "NHS surgical list",
+    "total": 480.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-03-29",
+    "submitted_date": "2026-03-30",
+    "expected_payment_date": "2026-05-03",
+    "paid_date": "2026-04-26",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-29"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-30"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-03"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-26"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0029",
+    "invoice_number": "INV-2026-0050",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "J.J-9100",
+    "description": "Diagnostic review",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 9.6,
+    "currency": "GBP",
+    "issued_date": "2026-03-30",
+    "submitted_date": "2026-03-30",
+    "expected_payment_date": "2026-05-08",
+    "paid_date": "2026-04-18",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-30"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-03-30"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-03"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-04-18"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0016",
+    "invoice_number": "INV-2026-0051",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "M.K-8119",
+    "description": "Diagnostic review",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 9.6,
+    "currency": "GBP",
+    "issued_date": "2026-03-31",
+    "submitted_date": "2026-04-03",
+    "expected_payment_date": "2026-05-21",
+    "paid_date": "2026-05-16",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-03-31"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-03"
       },
       {
         "stage": "with_insurer",
@@ -2243,251 +1953,159 @@
       },
       {
         "stage": "paid",
-        "at": "2026-05-05"
+        "at": "2026-05-16"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0090",
-    "invoice_number": "INV-2026-0057",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "A.W-6374",
-    "description": "Medical report",
-    "total": 120.0,
+    "id": "inv_0009",
+    "invoice_number": "INV-2026-0052",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "T.T-9281",
+    "description": "NHS clinic session",
+    "total": 320.0,
     "amount_due": 0.0,
-    "middleman_fee": 3.6,
+    "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-04-09",
-    "submitted_date": "2026-04-12",
-    "expected_payment_date": "2026-05-30",
-    "paid_date": "2026-04-30",
+    "issued_date": "2026-04-03",
+    "submitted_date": "2026-04-06",
+    "expected_payment_date": "2026-05-10",
+    "paid_date": "2026-05-09",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-04-09"
+        "at": "2026-04-03"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-04-09"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-12"
+        "stage": "at_medserv",
+        "at": "2026-04-06"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-04-15"
+        "at": "2026-04-10"
       },
       {
         "stage": "paid",
-        "at": "2026-04-30"
+        "at": "2026-05-09"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0076",
-    "invoice_number": "INV-2026-0058",
+    "id": "inv_0069",
+    "invoice_number": "INV-2026-0053",
     "payer_type": "private_insurer",
-    "insurer_name": "Vitality",
-    "patient_ref": "B.L-8749",
+    "insurer_name": "Aviva",
+    "patient_ref": "J.K-1551",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 0.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-04-03",
+    "submitted_date": "2026-04-06",
+    "expected_payment_date": "2026-05-24",
+    "paid_date": "2026-05-16",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-03"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-06"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-09"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-16"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0072",
+    "invoice_number": "INV-2026-0054",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "J.S-6336",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 0.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-04-03",
+    "submitted_date": "2026-04-06",
+    "expected_payment_date": "2026-05-25",
+    "paid_date": "2026-06-05",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-03"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-06"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-10"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-05"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0077",
+    "invoice_number": "INV-2026-0055",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "P.L-1834",
     "description": "Minor procedure",
     "total": 450.0,
     "amount_due": 0.0,
     "middleman_fee": 13.5,
     "currency": "GBP",
-    "issued_date": "2026-04-11",
-    "submitted_date": "2026-04-12",
-    "expected_payment_date": "2026-05-31",
-    "paid_date": "2026-05-08",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-11"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-11"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-12"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-16"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-08"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0044",
-    "invoice_number": "INV-2026-0059",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "B.G-7883",
-    "description": "Medical report",
-    "total": 120.0,
-    "amount_due": 0.0,
-    "middleman_fee": 3.6,
-    "currency": "GBP",
-    "issued_date": "2026-04-13",
-    "submitted_date": "2026-04-16",
-    "expected_payment_date": "2026-06-04",
-    "paid_date": "2026-06-02",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-13"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-13"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-16"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-20"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-02"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0074",
-    "invoice_number": "INV-2026-0060",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "L.T-5377",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-13",
-    "submitted_date": "2026-04-13",
-    "expected_payment_date": "2026-05-11",
-    "paid_date": "2026-05-10",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-13"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-13"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-13"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-16"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-10"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0045",
-    "invoice_number": "INV-2026-0061",
-    "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "W.H-8999",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 900.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-14",
-    "submitted_date": "2026-04-17",
-    "expected_payment_date": "2026-06-05",
-    "paid_date": null,
-    "pipeline_status": "rejected",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-14"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-14"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-17"
-      },
-      {
-        "stage": "rejected",
-        "at": "2026-04-21"
-      }
-    ],
-    "validation_issues": [
-      {
-        "field": "Treatment Date",
-        "error": "Outside policy cover period",
-        "solution": "Verify the policy start date; attach pre-authorisation if cover was agreed."
-      }
-    ],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0033",
-    "invoice_number": "INV-2026-0062",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "J.F-5349",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-17",
-    "submitted_date": "2026-04-20",
-    "expected_payment_date": "2026-05-18",
+    "issued_date": "2026-04-07",
+    "submitted_date": "2026-04-10",
+    "expected_payment_date": "2026-05-17",
     "paid_date": "2026-05-22",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-04-17"
+        "at": "2026-04-07"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-04-17"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-20"
+        "stage": "at_medserv",
+        "at": "2026-04-10"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-04-23"
+        "at": "2026-04-12"
       },
       {
         "stage": "paid",
@@ -2498,119 +2116,152 @@
     "source": "seed"
   },
   {
-    "id": "inv_0037",
-    "invoice_number": "INV-2026-0063",
+    "id": "inv_0109",
+    "invoice_number": "INV-2026-0056",
     "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "T.S-3780",
+    "insurer_name": "AXA Health",
+    "patient_ref": "N.J-6778",
     "description": "Initial consultation",
     "total": 250.0,
     "amount_due": 0.0,
     "middleman_fee": 7.5,
     "currency": "GBP",
-    "issued_date": "2026-04-18",
-    "submitted_date": "2026-04-20",
-    "expected_payment_date": "2026-06-08",
-    "paid_date": "2026-06-07",
+    "issued_date": "2026-04-11",
+    "submitted_date": "2026-04-14",
+    "expected_payment_date": "2026-05-25",
+    "paid_date": "2026-05-11",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-04-18"
+        "at": "2026-04-11"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-04-18"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-20"
+        "stage": "at_medserv",
+        "at": "2026-04-14"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-04-24"
+        "at": "2026-04-15"
       },
       {
         "stage": "paid",
-        "at": "2026-06-07"
+        "at": "2026-05-11"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0017",
-    "invoice_number": "INV-2026-0064",
+    "id": "inv_0084",
+    "invoice_number": "INV-2026-0057",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "D.B-7596",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-19",
-    "submitted_date": "2026-04-22",
-    "expected_payment_date": "2026-05-21",
-    "paid_date": "2026-05-17",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-19"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-19"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-22"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-26"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-17"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0031",
-    "invoice_number": "INV-2026-0065",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "N.B-8711",
+    "patient_ref": "M.C-2378",
     "description": "NHS surgical list",
     "total": 480.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-04-20",
-    "submitted_date": "2026-04-21",
-    "expected_payment_date": "2026-05-19",
-    "paid_date": "2026-05-19",
+    "issued_date": "2026-04-14",
+    "submitted_date": "2026-04-14",
+    "expected_payment_date": "2026-05-17",
+    "paid_date": "2026-05-01",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-04-20"
+        "at": "2026-04-14"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-04-20"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-21"
+        "stage": "at_medserv",
+        "at": "2026-04-14"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-04-24"
+        "at": "2026-04-17"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-01"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0002",
+    "invoice_number": "INV-2026-0058",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "N.T-5455",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-04-15",
+    "submitted_date": "2026-04-15",
+    "expected_payment_date": "2026-05-19",
+    "paid_date": "2026-05-02",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-15"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-15"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-19"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-02"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0059",
+    "invoice_number": "INV-2026-0059",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "J.G-9495",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-04-15",
+    "submitted_date": "2026-04-17",
+    "expected_payment_date": "2026-05-18",
+    "paid_date": "2026-05-19",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-15"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-17"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-18"
       },
       {
         "stage": "paid",
@@ -2621,490 +2272,230 @@
     "source": "seed"
   },
   {
-    "id": "inv_0071",
-    "invoice_number": "INV-2026-0066",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "K.R-8941",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-20",
-    "submitted_date": "2026-04-23",
-    "expected_payment_date": "2026-05-19",
-    "paid_date": "2026-05-13",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-20"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-20"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-23"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-24"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-13"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
     "id": "inv_0093",
-    "invoice_number": "INV-2026-0067",
-    "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "M.D-7018",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
-    "issued_date": "2026-04-21",
-    "submitted_date": "2026-04-23",
-    "expected_payment_date": "2026-06-09",
-    "paid_date": "2026-06-13",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-21"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-21"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-23"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-25"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-13"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0021",
-    "invoice_number": "INV-2026-0068",
-    "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "W.B-6138",
-    "description": "Medical report",
-    "total": 120.0,
-    "amount_due": 0.0,
-    "middleman_fee": 3.6,
-    "currency": "GBP",
-    "issued_date": "2026-04-23",
-    "submitted_date": "2026-04-24",
-    "expected_payment_date": "2026-06-10",
-    "paid_date": "2026-05-13",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-23"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-23"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-24"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-26"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-13"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0105",
-    "invoice_number": "INV-2026-0069",
-    "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "K.L-6751",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 0.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-24",
-    "submitted_date": "2026-04-26",
-    "expected_payment_date": "2026-06-11",
-    "paid_date": "2026-06-02",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-24"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-24"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-26"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-27"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-02"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0101",
-    "invoice_number": "INV-2026-0070",
+    "invoice_number": "INV-2026-0060",
     "payer_type": "private_insurer",
     "insurer_name": "AXA Health",
-    "patient_ref": "M.E-8770",
-    "description": "Follow-up consultation",
-    "total": 150.0,
-    "amount_due": 0.0,
-    "middleman_fee": 4.5,
-    "currency": "GBP",
-    "issued_date": "2026-04-25",
-    "submitted_date": "2026-04-25",
-    "expected_payment_date": "2026-06-12",
-    "paid_date": "2026-06-12",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-25"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-25"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-25"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-28"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-12"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0061",
-    "invoice_number": "INV-2026-0071",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "B.E-3444",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-27",
-    "submitted_date": "2026-04-27",
-    "expected_payment_date": "2026-05-23",
-    "paid_date": "2026-05-22",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-27"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-27"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-27"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-28"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-22"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0019",
-    "invoice_number": "INV-2026-0072",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "F.P-8956",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 0.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-28",
-    "submitted_date": "2026-04-28",
-    "expected_payment_date": "2026-06-13",
-    "paid_date": "2026-05-27",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-28"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-28"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-28"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-04-29"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-27"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0108",
-    "invoice_number": "INV-2026-0073",
-    "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "M.P-2816",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 0.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
-    "issued_date": "2026-04-28",
-    "submitted_date": "2026-05-01",
-    "expected_payment_date": "2026-06-18",
-    "paid_date": "2026-06-22",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-28"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-28"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-01"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-04"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-22"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0042",
-    "invoice_number": "INV-2026-0074",
-    "payer_type": "private_insurer",
-    "insurer_name": "Vitality",
-    "patient_ref": "J.T-8939",
-    "description": "Medical report",
-    "total": 120.0,
-    "amount_due": 0.0,
-    "middleman_fee": 3.6,
-    "currency": "GBP",
-    "issued_date": "2026-04-29",
-    "submitted_date": "2026-05-02",
-    "expected_payment_date": "2026-06-19",
-    "paid_date": "2026-06-19",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-29"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-29"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-02"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-05"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-19"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0098",
-    "invoice_number": "INV-2026-0075",
-    "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "T.K-8504",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 0.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-29",
-    "submitted_date": "2026-05-02",
-    "expected_payment_date": "2026-06-18",
-    "paid_date": "2026-06-10",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-29"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-29"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-02"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-04"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-10"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0015",
-    "invoice_number": "INV-2026-0076",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "B.L-2160",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 320.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-04-30",
-    "submitted_date": "2026-05-01",
-    "expected_payment_date": "2026-05-28",
-    "paid_date": null,
-    "pipeline_status": "rejected",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-04-30"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-04-30"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-01"
-      },
-      {
-        "stage": "rejected",
-        "at": "2026-05-02"
-      }
-    ],
-    "validation_issues": [
-      {
-        "field": "Diagnosis Code",
-        "error": "Must be specified",
-        "solution": "Enter an ICD-10 diagnosis code before resubmitting."
-      }
-    ],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0063",
-    "invoice_number": "INV-2026-0077",
-    "payer_type": "private_insurer",
-    "insurer_name": "Vitality",
-    "patient_ref": "G.J-2330",
+    "patient_ref": "S.P-6228",
     "description": "Minor procedure",
     "total": 450.0,
     "amount_due": 0.0,
     "middleman_fee": 13.5,
     "currency": "GBP",
-    "issued_date": "2026-04-30",
-    "submitted_date": "2026-04-30",
-    "expected_payment_date": "2026-06-15",
-    "paid_date": "2026-06-20",
+    "issued_date": "2026-04-21",
+    "submitted_date": "2026-04-21",
+    "expected_payment_date": "2026-06-01",
+    "paid_date": "2026-05-15",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-04-30"
+        "at": "2026-04-21"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-04-30"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-04-30"
+        "stage": "at_medserv",
+        "at": "2026-04-21"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-05-01"
+        "at": "2026-04-22"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-15"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0011",
+    "invoice_number": "INV-2026-0061",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "B.C-5394",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-04-23",
+    "submitted_date": "2026-04-26",
+    "expected_payment_date": "2026-05-27",
+    "paid_date": "2026-05-21",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-23"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-26"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-27"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-21"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0092",
+    "invoice_number": "INV-2026-0062",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "F.N-6467",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 0.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-04-23",
+    "submitted_date": "2026-04-24",
+    "expected_payment_date": "2026-06-02",
+    "paid_date": "2026-06-05",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-23"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-24"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-28"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-05"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0070",
+    "invoice_number": "INV-2026-0063",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "P.B-2828",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-04-24",
+    "submitted_date": "2026-04-25",
+    "expected_payment_date": "2026-05-29",
+    "paid_date": "2026-05-29",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-24"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-25"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-29"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-29"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0026",
+    "invoice_number": "INV-2026-0064",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "M.L-7131",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-04-25",
+    "submitted_date": "2026-04-26",
+    "expected_payment_date": "2026-05-27",
+    "paid_date": "2026-05-25",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-25"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-26"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-27"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-25"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0056",
+    "invoice_number": "INV-2026-0065",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "M.N-8066",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-04-26",
+    "submitted_date": "2026-04-29",
+    "expected_payment_date": "2026-05-30",
+    "paid_date": "2026-06-20",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-04-26"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-04-29"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-04-30"
       },
       {
         "stage": "paid",
@@ -3115,283 +2506,35 @@
     "source": "seed"
   },
   {
-    "id": "inv_0025",
-    "invoice_number": "INV-2026-0078",
-    "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "H.M-5669",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 0.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-05-02",
-    "submitted_date": "2026-05-04",
-    "expected_payment_date": "2026-06-20",
-    "paid_date": "2026-06-22",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-05-02"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-05-02"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-04"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-06"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-22"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0073",
-    "invoice_number": "INV-2026-0079",
-    "payer_type": "private_insurer",
-    "insurer_name": "Vitality",
-    "patient_ref": "H.R-3369",
-    "description": "Medical report",
-    "total": 120.0,
-    "amount_due": 0.0,
-    "middleman_fee": 3.6,
-    "currency": "GBP",
-    "issued_date": "2026-05-03",
-    "submitted_date": "2026-05-05",
-    "expected_payment_date": "2026-06-23",
-    "paid_date": "2026-05-25",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-05-03"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-05-03"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-05"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-09"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-25"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0054",
-    "invoice_number": "INV-2026-0080",
+    "id": "inv_0065",
+    "invoice_number": "INV-2026-0066",
     "payer_type": "private_insurer",
     "insurer_name": "AXA Health",
-    "patient_ref": "R.H-8613",
-    "description": "Medical report",
-    "total": 120.0,
+    "patient_ref": "L.M-5779",
+    "description": "Minor procedure",
+    "total": 450.0,
     "amount_due": 0.0,
-    "middleman_fee": 3.6,
+    "middleman_fee": 13.5,
     "currency": "GBP",
-    "issued_date": "2026-05-04",
-    "submitted_date": "2026-05-06",
-    "expected_payment_date": "2026-06-22",
-    "paid_date": "2026-06-10",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-05-04"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-05-04"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-06"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-08"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-10"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0020",
-    "invoice_number": "INV-2026-0081",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "J.R-5673",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-05-08",
-    "submitted_date": "2026-05-08",
-    "expected_payment_date": "2026-06-04",
-    "paid_date": "2026-05-28",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-05-08"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-05-08"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-08"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-10"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-05-28"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0059",
-    "invoice_number": "INV-2026-0082",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "W.E-5494",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-05-08",
-    "submitted_date": "2026-05-10",
-    "expected_payment_date": "2026-06-06",
-    "paid_date": "2026-06-16",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-05-08"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-05-08"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-10"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-12"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-16"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0002",
-    "invoice_number": "INV-2026-0083",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "A.F-7924",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 0.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-05-14",
-    "submitted_date": "2026-05-17",
-    "expected_payment_date": "2026-07-03",
-    "paid_date": "2026-07-04",
-    "pipeline_status": "paid",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-05-14"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-05-14"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-17"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-05-19"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-07-04"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0016",
-    "invoice_number": "INV-2026-0084",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "S.H-8749",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-05-16",
-    "submitted_date": "2026-05-17",
+    "issued_date": "2026-04-30",
+    "submitted_date": "2026-05-02",
     "expected_payment_date": "2026-06-13",
     "paid_date": "2026-06-12",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-05-16"
+        "at": "2026-04-30"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-16"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-17"
+        "stage": "at_medserv",
+        "at": "2026-05-02"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-05-19"
+        "at": "2026-05-04"
       },
       {
         "stage": "paid",
@@ -3402,156 +2545,538 @@
     "source": "seed"
   },
   {
-    "id": "inv_0056",
-    "invoice_number": "INV-2026-0085",
+    "id": "inv_0106",
+    "invoice_number": "INV-2026-0067",
     "payer_type": "private_insurer",
     "insurer_name": "Bupa",
-    "patient_ref": "S.S-8342",
+    "patient_ref": "T.K-5500",
     "description": "Initial consultation",
     "total": 250.0,
     "amount_due": 0.0,
     "middleman_fee": 7.5,
     "currency": "GBP",
-    "issued_date": "2026-05-17",
-    "submitted_date": "2026-05-20",
-    "expected_payment_date": "2026-07-08",
-    "paid_date": "2026-07-01",
+    "issued_date": "2026-04-30",
+    "submitted_date": "2026-04-30",
+    "expected_payment_date": "2026-06-07",
+    "paid_date": "2026-05-27",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-05-17"
+        "at": "2026-04-30"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-17"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-20"
+        "stage": "at_medserv",
+        "at": "2026-04-30"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-05-24"
+        "at": "2026-05-03"
       },
       {
         "stage": "paid",
-        "at": "2026-07-01"
+        "at": "2026-05-27"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0014",
-    "invoice_number": "INV-2026-0086",
+    "id": "inv_0042",
+    "invoice_number": "INV-2026-0068",
     "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "M.R-9479",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 320.0,
-    "middleman_fee": 9.6,
+    "insurer_name": "Aviva",
+    "patient_ref": "W.L-7628",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 0.0,
+    "middleman_fee": 4.5,
     "currency": "GBP",
-    "issued_date": "2026-05-20",
-    "submitted_date": "2026-05-21",
-    "expected_payment_date": "2026-07-08",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
+    "issued_date": "2026-05-01",
+    "submitted_date": "2026-05-01",
+    "expected_payment_date": "2026-06-18",
+    "paid_date": "2026-06-11",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-05-20"
+        "at": "2026-05-01"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-20"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-21"
+        "stage": "at_medserv",
+        "at": "2026-05-01"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-05-24"
+        "at": "2026-05-04"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-11"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0004",
-    "invoice_number": "INV-2026-0087",
+    "id": "inv_0048",
+    "invoice_number": "INV-2026-0069",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "H.J-1267",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 0.0,
+    "middleman_fee": 13.5,
+    "currency": "GBP",
+    "issued_date": "2026-05-01",
+    "submitted_date": "2026-05-01",
+    "expected_payment_date": "2026-06-06",
+    "paid_date": "2026-05-28",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-01"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-01"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-02"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-28"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0081",
+    "invoice_number": "INV-2026-0070",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "M.G-2139",
+    "patient_ref": "F.H-5637",
     "description": "NHS surgical list",
     "total": 480.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-05-22",
-    "submitted_date": "2026-05-22",
-    "expected_payment_date": "2026-06-19",
-    "paid_date": "2026-06-17",
+    "issued_date": "2026-05-02",
+    "submitted_date": "2026-05-02",
+    "expected_payment_date": "2026-06-04",
+    "paid_date": "2026-06-01",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-05-22"
+        "at": "2026-05-02"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-22"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-22"
+        "stage": "at_medserv",
+        "at": "2026-05-02"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-05-25"
+        "at": "2026-05-05"
       },
       {
         "stage": "paid",
-        "at": "2026-06-17"
+        "at": "2026-06-01"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0066",
-    "invoice_number": "INV-2026-0088",
+    "id": "inv_0095",
+    "invoice_number": "INV-2026-0071",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "K.K-8195",
+    "patient_ref": "C.D-3620",
+    "description": "NHS surgical list",
+    "total": 480.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-05-02",
+    "submitted_date": "2026-05-05",
+    "expected_payment_date": "2026-06-07",
+    "paid_date": "2026-06-09",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-02"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-05"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-08"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-09"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0076",
+    "invoice_number": "INV-2026-0072",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "E.K-5668",
+    "description": "Medical report",
+    "total": 120.0,
+    "amount_due": 0.0,
+    "middleman_fee": 3.6,
+    "currency": "GBP",
+    "issued_date": "2026-05-03",
+    "submitted_date": "2026-05-03",
+    "expected_payment_date": "2026-06-16",
+    "paid_date": "2026-05-22",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-03"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-03"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-07"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-22"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0098",
+    "invoice_number": "INV-2026-0073",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "M.D-7465",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 0.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-05-04",
+    "submitted_date": "2026-05-06",
+    "expected_payment_date": "2026-06-12",
+    "paid_date": "2026-06-19",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-04"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-06"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-08"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-19"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0039",
+    "invoice_number": "INV-2026-0074",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "J.A-8422",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 25.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-05-06",
+    "submitted_date": "2026-05-07",
+    "expected_payment_date": "2026-06-12",
+    "paid_date": "2026-06-24",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-06"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-07"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-08"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-24"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0012",
+    "invoice_number": "INV-2026-0075",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "S.E-5686",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 0.0,
+    "middleman_fee": 13.5,
+    "currency": "GBP",
+    "issued_date": "2026-05-07",
+    "submitted_date": "2026-05-07",
+    "expected_payment_date": "2026-06-20",
+    "paid_date": "2026-06-24",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-07"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-07"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-11"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-24"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0035",
+    "invoice_number": "INV-2026-0076",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "M.L-1317",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 0.0,
+    "middleman_fee": 13.5,
+    "currency": "GBP",
+    "issued_date": "2026-05-09",
+    "submitted_date": "2026-05-12",
+    "expected_payment_date": "2026-06-18",
+    "paid_date": "2026-06-06",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-09"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-12"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-14"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-06"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0018",
+    "invoice_number": "INV-2026-0077",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "K.T-5175",
+    "description": "Major procedure",
+    "total": 900.0,
+    "amount_due": 0.0,
+    "middleman_fee": 27.0,
+    "currency": "GBP",
+    "issued_date": "2026-05-12",
+    "submitted_date": "2026-05-14",
+    "expected_payment_date": "2026-06-19",
+    "paid_date": "2026-06-21",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-12"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-14"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-15"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-21"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0083",
+    "invoice_number": "INV-2026-0078",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "E.S-5542",
     "description": "NHS clinic session",
     "total": 320.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-05-24",
-    "submitted_date": "2026-05-26",
-    "expected_payment_date": "2026-06-22",
-    "paid_date": "2026-06-15",
+    "issued_date": "2026-05-12",
+    "submitted_date": "2026-05-13",
+    "expected_payment_date": "2026-06-13",
+    "paid_date": "2026-05-30",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-05-24"
+        "at": "2026-05-12"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-24"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-26"
+        "stage": "at_medserv",
+        "at": "2026-05-13"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-05-28"
+        "at": "2026-05-14"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-05-30"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0089",
+    "invoice_number": "INV-2026-0079",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "T.J-2940",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 150.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-05-12",
+    "submitted_date": "2026-05-13",
+    "expected_payment_date": "2026-06-24",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-12"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-13"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-15"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0091",
+    "invoice_number": "INV-2026-0080",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "M.D-4183",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-05-13",
+    "submitted_date": "2026-05-14",
+    "expected_payment_date": "2026-06-15",
+    "paid_date": "2026-06-15",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-13"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-14"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-16"
       },
       {
         "stage": "paid",
@@ -3562,82 +3087,113 @@
     "source": "seed"
   },
   {
-    "id": "inv_0094",
-    "invoice_number": "INV-2026-0089",
-    "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "R.C-4475",
-    "description": "Medical report",
-    "total": 120.0,
+    "id": "inv_0037",
+    "invoice_number": "INV-2026-0081",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "D.S-6372",
+    "description": "NHS clinic session",
+    "total": 320.0,
     "amount_due": 0.0,
-    "middleman_fee": 3.6,
+    "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-05-24",
-    "submitted_date": "2026-05-27",
-    "expected_payment_date": "2026-07-14",
-    "paid_date": "2026-07-03",
+    "issued_date": "2026-05-19",
+    "submitted_date": "2026-05-22",
+    "expected_payment_date": "2026-06-25",
+    "paid_date": "2026-06-27",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-05-24"
+        "at": "2026-05-19"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-24"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-27"
+        "stage": "at_medserv",
+        "at": "2026-05-22"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-05-30"
+        "at": "2026-05-26"
       },
       {
         "stage": "paid",
-        "at": "2026-07-03"
+        "at": "2026-06-27"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0041",
-    "invoice_number": "INV-2026-0090",
+    "id": "inv_0047",
+    "invoice_number": "INV-2026-0082",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "T.P-9976",
+    "patient_ref": "K.T-1205",
     "description": "NHS clinic session",
     "total": 320.0,
-    "amount_due": 0.0,
+    "amount_due": 320.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-05-27",
-    "submitted_date": "2026-05-29",
-    "expected_payment_date": "2026-06-27",
-    "paid_date": "2026-06-16",
-    "pipeline_status": "paid",
+    "issued_date": "2026-05-19",
+    "submitted_date": "2026-05-20",
+    "expected_payment_date": "2026-06-22",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-05-27"
+        "at": "2026-05-19"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-27"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-05-29"
+        "stage": "at_medserv",
+        "at": "2026-05-20"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-06-02"
+        "at": "2026-05-23"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0114",
+    "invoice_number": "INV-2026-0083",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "S.F-1315",
+    "description": "Medical report",
+    "total": 120.0,
+    "amount_due": 0.0,
+    "middleman_fee": 3.6,
+    "currency": "GBP",
+    "issued_date": "2026-05-23",
+    "submitted_date": "2026-05-26",
+    "expected_payment_date": "2026-07-02",
+    "paid_date": "2026-07-04",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-23"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-26"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-28"
       },
       {
         "stage": "paid",
-        "at": "2026-06-16"
+        "at": "2026-07-04"
       }
     ],
     "validation_issues": [],
@@ -3645,31 +3201,103 @@
   },
   {
     "id": "inv_0062",
-    "invoice_number": "INV-2026-0091",
+    "invoice_number": "INV-2026-0084",
     "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "H.T-7232",
+    "insurer_name": "Bupa",
+    "patient_ref": "W.J-9772",
     "description": "Initial consultation",
     "total": 250.0,
     "amount_due": 250.0,
     "middleman_fee": 7.5,
     "currency": "GBP",
-    "issued_date": "2026-05-29",
-    "submitted_date": "2026-05-29",
-    "expected_payment_date": "2026-07-17",
+    "issued_date": "2026-05-25",
+    "submitted_date": "2026-05-26",
+    "expected_payment_date": "2026-07-03",
     "paid_date": null,
     "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-05-29"
+        "at": "2026-05-25"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-29"
+        "stage": "at_medserv",
+        "at": "2026-05-26"
       },
       {
-        "stage": "at_healthcode",
+        "stage": "with_insurer",
+        "at": "2026-05-29"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0099",
+    "invoice_number": "INV-2026-0085",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "F.C-5525",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 0.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-05-25",
+    "submitted_date": "2026-05-28",
+    "expected_payment_date": "2026-07-10",
+    "paid_date": "2026-06-18",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-25"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-28"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-31"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-18"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0080",
+    "invoice_number": "INV-2026-0086",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "A.D-8295",
+    "description": "Major procedure",
+    "total": 900.0,
+    "amount_due": 900.0,
+    "middleman_fee": 27.0,
+    "currency": "GBP",
+    "issued_date": "2026-05-26",
+    "submitted_date": "2026-05-29",
+    "expected_payment_date": "2026-07-12",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-26"
+      },
+      {
+        "stage": "at_medserv",
         "at": "2026-05-29"
       },
       {
@@ -3681,37 +3309,144 @@
     "source": "seed"
   },
   {
-    "id": "inv_0055",
-    "invoice_number": "INV-2026-0092",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "J.J-1166",
-    "description": "Diagnostic review",
+    "id": "inv_0032",
+    "invoice_number": "INV-2026-0087",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "L.J-3421",
+    "description": "NHS clinic session",
     "total": 320.0,
     "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-05-27",
+    "submitted_date": "2026-05-28",
+    "expected_payment_date": "2026-06-28",
+    "paid_date": "2026-06-15",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-27"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-28"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-05-29"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-15"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0082",
+    "invoice_number": "INV-2026-0088",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "D.F-9652",
+    "description": "Diagnostic review",
+    "total": 320.0,
+    "amount_due": 320.0,
     "middleman_fee": 9.6,
+    "currency": "GBP",
+    "issued_date": "2026-05-29",
+    "submitted_date": "2026-05-30",
+    "expected_payment_date": "2026-07-12",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-05-29"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-05-30"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-02"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0013",
+    "invoice_number": "INV-2026-0089",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "T.C-4501",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 450.0,
+    "middleman_fee": 13.5,
     "currency": "GBP",
     "issued_date": "2026-05-30",
     "submitted_date": "2026-06-02",
-    "expected_payment_date": "2026-07-19",
-    "paid_date": "2026-06-30",
-    "pipeline_status": "paid",
+    "expected_payment_date": "2026-07-20",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
         "at": "2026-05-30"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-05-30"
-      },
-      {
-        "stage": "at_healthcode",
+        "stage": "at_medserv",
         "at": "2026-06-02"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-06-04"
+        "at": "2026-06-05"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0003",
+    "invoice_number": "INV-2026-0090",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "B.D-8494",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 0.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-06-01",
+    "submitted_date": "2026-06-01",
+    "expected_payment_date": "2026-07-02",
+    "paid_date": "2026-06-30",
+    "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-01"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-01"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-02"
       },
       {
         "stage": "paid",
@@ -3722,258 +3457,285 @@
     "source": "seed"
   },
   {
-    "id": "inv_0087",
-    "invoice_number": "INV-2026-0093",
+    "id": "inv_0066",
+    "invoice_number": "INV-2026-0091",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "M.T-9221",
+    "patient_ref": "A.N-2454",
     "description": "NHS clinic session",
     "total": 320.0,
-    "amount_due": 320.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-06-02",
-    "submitted_date": "2026-06-05",
-    "expected_payment_date": "2026-07-02",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-02"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-02"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-05"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-07"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0009",
-    "invoice_number": "INV-2026-0094",
-    "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "E.F-7916",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 900.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-06-03",
-    "submitted_date": "2026-06-06",
-    "expected_payment_date": "2026-07-22",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-03"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-03"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-06"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-07"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0103",
-    "invoice_number": "INV-2026-0095",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "M.D-9313",
-    "description": "Major procedure",
-    "total": 900.0,
-    "amount_due": 900.0,
-    "middleman_fee": 27.0,
-    "currency": "GBP",
-    "issued_date": "2026-06-04",
-    "submitted_date": "2026-06-07",
-    "expected_payment_date": "2026-07-23",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-04"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-04"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-07"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-08"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0010",
-    "invoice_number": "INV-2026-0096",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "A.D-9797",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 480.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-06-06",
-    "submitted_date": "2026-06-09",
-    "expected_payment_date": "2026-07-07",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-06"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-06"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-09"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-12"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0091",
-    "invoice_number": "INV-2026-0097",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "B.K-9071",
-    "description": "NHS clinic session",
-    "total": 320.0,
-    "amount_due": 320.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-06-10",
-    "submitted_date": "2026-06-12",
-    "expected_payment_date": "2026-07-11",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-10"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-10"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-12"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-16"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0080",
-    "invoice_number": "INV-2026-0098",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "D.R-3725",
-    "description": "NHS surgical list",
-    "total": 480.0,
     "amount_due": 0.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-06-12",
-    "submitted_date": "2026-06-13",
-    "expected_payment_date": "2026-07-09",
-    "paid_date": "2026-06-29",
+    "issued_date": "2026-06-03",
+    "submitted_date": "2026-06-04",
+    "expected_payment_date": "2026-07-05",
+    "paid_date": "2026-06-27",
     "pipeline_status": "paid",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-06-12"
+        "at": "2026-06-03"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-06-12"
+        "stage": "at_medserv",
+        "at": "2026-06-04"
       },
       {
-        "stage": "at_healthcode",
+        "stage": "with_insurer",
+        "at": "2026-06-05"
+      },
+      {
+        "stage": "paid",
+        "at": "2026-06-27"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0061",
+    "invoice_number": "INV-2026-0092",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "D.A-1635",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 150.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-06-06",
+    "submitted_date": "2026-06-06",
+    "expected_payment_date": "2026-07-15",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-06"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-06"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-10"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0015",
+    "invoice_number": "INV-2026-0093",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "D.L-6868",
+    "description": "Major procedure",
+    "total": 900.0,
+    "amount_due": 900.0,
+    "middleman_fee": 27.0,
+    "currency": "GBP",
+    "issued_date": "2026-06-10",
+    "submitted_date": "2026-06-11",
+    "expected_payment_date": "2026-07-20",
+    "paid_date": null,
+    "pipeline_status": "rejected",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-10"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-11"
+      },
+      {
+        "stage": "rejected",
+        "at": "2026-06-14"
+      }
+    ],
+    "validation_issues": [
+      {
+        "field": "Provider Number",
+        "error": "Invalid code",
+        "solution": "Check the Medserv provider number in Settings matches your registration."
+      }
+    ],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0079",
+    "invoice_number": "INV-2026-0094",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "A.R-9083",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 150.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-06-10",
+    "submitted_date": "2026-06-13",
+    "expected_payment_date": "2026-07-25",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-10"
+      },
+      {
+        "stage": "at_medserv",
         "at": "2026-06-13"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-06-14"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-06-29"
+        "at": "2026-06-15"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0043",
-    "invoice_number": "INV-2026-0099",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "E.E-4788",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 480.0,
-    "middleman_fee": 0.0,
+    "id": "inv_0014",
+    "invoice_number": "INV-2026-0095",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "H.G-4234",
+    "description": "Medical report",
+    "total": 120.0,
+    "amount_due": 120.0,
+    "middleman_fee": 3.6,
     "currency": "GBP",
-    "issued_date": "2026-06-14",
-    "submitted_date": "2026-06-16",
-    "expected_payment_date": "2026-07-14",
+    "issued_date": "2026-06-11",
+    "submitted_date": "2026-06-12",
+    "expected_payment_date": "2026-07-28",
     "paid_date": null,
     "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-11"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-12"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-13"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0110",
+    "invoice_number": "INV-2026-0096",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "A.A-2939",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 320.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-06-12",
+    "submitted_date": "2026-06-14",
+    "expected_payment_date": "2026-07-17",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-12"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-14"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-17"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0030",
+    "invoice_number": "INV-2026-0097",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "N.N-1578",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 450.0,
+    "middleman_fee": 13.5,
+    "currency": "GBP",
+    "issued_date": "2026-06-14",
+    "submitted_date": "2026-06-14",
+    "expected_payment_date": "2026-07-23",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
         "at": "2026-06-14"
       },
       {
-        "stage": "at_semble",
+        "stage": "at_medserv",
         "at": "2026-06-14"
       },
       {
-        "stage": "at_healthcode",
+        "stage": "with_insurer",
+        "at": "2026-06-18"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0058",
+    "invoice_number": "INV-2026-0098",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "F.S-6686",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 150.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-06-14",
+    "submitted_date": "2026-06-16",
+    "expected_payment_date": "2026-07-24",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-14"
+      },
+      {
+        "stage": "at_medserv",
         "at": "2026-06-16"
       },
       {
@@ -3985,62 +3747,169 @@
     "source": "seed"
   },
   {
-    "id": "inv_0086",
-    "invoice_number": "INV-2026-0100",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "K.R-1546",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 0.0,
-    "middleman_fee": 0.0,
+    "id": "inv_0090",
+    "invoice_number": "INV-2026-0099",
+    "payer_type": "private_insurer",
+    "insurer_name": "Bupa",
+    "patient_ref": "H.B-3776",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 150.0,
+    "middleman_fee": 4.5,
     "currency": "GBP",
-    "issued_date": "2026-06-16",
-    "submitted_date": "2026-06-17",
-    "expected_payment_date": "2026-07-13",
-    "paid_date": "2026-07-03",
-    "pipeline_status": "paid",
+    "issued_date": "2026-06-15",
+    "submitted_date": "2026-06-15",
+    "expected_payment_date": "2026-07-21",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-06-16"
+        "at": "2026-06-15"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-06-16"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-17"
+        "stage": "at_medserv",
+        "at": "2026-06-15"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-06-18"
-      },
-      {
-        "stage": "paid",
-        "at": "2026-07-03"
+        "at": "2026-06-16"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0001",
+    "id": "inv_0024",
+    "invoice_number": "INV-2026-0100",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "C.R-2719",
+    "description": "Diagnostic review",
+    "total": 320.0,
+    "amount_due": 320.0,
+    "middleman_fee": 9.6,
+    "currency": "GBP",
+    "issued_date": "2026-06-16",
+    "submitted_date": "2026-06-17",
+    "expected_payment_date": "2026-07-31",
+    "paid_date": null,
+    "pipeline_status": "rejected",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-16"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-17"
+      },
+      {
+        "stage": "rejected",
+        "at": "2026-06-18"
+      }
+    ],
+    "validation_issues": [
+      {
+        "field": "Procedure Code",
+        "error": "Code not mapped",
+        "solution": "Map the CCSD procedure code for this treatment in the code list."
+      }
+    ],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0063",
     "invoice_number": "INV-2026-0101",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "C.G-4811",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 480.0,
+    "patient_ref": "N.N-5548",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 320.0,
     "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-06-16",
+    "submitted_date": "2026-06-19",
+    "expected_payment_date": "2026-07-23",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-16"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-19"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-23"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0034",
+    "invoice_number": "INV-2026-0102",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "D.E-3090",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 250.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-06-17",
+    "submitted_date": "2026-06-20",
+    "expected_payment_date": "2026-08-02",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-17"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-20"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-23"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0057",
+    "invoice_number": "INV-2026-0103",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "K.S-6658",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 250.0,
+    "middleman_fee": 7.5,
     "currency": "GBP",
     "issued_date": "2026-06-17",
     "submitted_date": null,
     "expected_payment_date": null,
     "paid_date": null,
     "pipeline_status": "draft",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
@@ -4051,143 +3920,30 @@
     "source": "seed"
   },
   {
-    "id": "inv_0007",
-    "invoice_number": "INV-2026-0102",
-    "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "C.G-6155",
-    "description": "Follow-up consultation",
-    "total": 150.0,
-    "amount_due": 150.0,
-    "middleman_fee": 4.5,
-    "currency": "GBP",
-    "issued_date": "2026-06-17",
-    "submitted_date": "2026-06-18",
-    "expected_payment_date": "2026-08-03",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-17"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-17"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-18"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-19"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0095",
-    "invoice_number": "INV-2026-0103",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "G.H-6383",
-    "description": "Initial consultation",
-    "total": 250.0,
-    "amount_due": 250.0,
-    "middleman_fee": 7.5,
-    "currency": "GBP",
-    "issued_date": "2026-06-18",
-    "submitted_date": "2026-06-19",
-    "expected_payment_date": "2026-08-04",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-18"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-18"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-19"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-20"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0099",
+    "id": "inv_0004",
     "invoice_number": "INV-2026-0104",
     "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "C.L-3430",
-    "description": "Initial consultation",
-    "total": 250.0,
-    "amount_due": 250.0,
-    "middleman_fee": 7.5,
+    "insurer_name": "Bupa",
+    "patient_ref": "J.M-4047",
+    "description": "Minor procedure",
+    "total": 450.0,
+    "amount_due": 450.0,
+    "middleman_fee": 13.5,
     "currency": "GBP",
-    "issued_date": "2026-06-18",
-    "submitted_date": "2026-06-18",
-    "expected_payment_date": "2026-08-06",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-18"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-18"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-18"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-22"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0038",
-    "invoice_number": "INV-2026-0105",
-    "payer_type": "nhs",
-    "insurer_name": "NHS England",
-    "patient_ref": "G.E-1400",
-    "description": "NHS surgical list",
-    "total": 480.0,
-    "amount_due": 480.0,
-    "middleman_fee": 0.0,
-    "currency": "GBP",
-    "issued_date": "2026-06-22",
+    "issued_date": "2026-06-19",
     "submitted_date": "2026-06-22",
-    "expected_payment_date": "2026-07-19",
+    "expected_payment_date": "2026-07-29",
     "paid_date": null,
     "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-06-22"
+        "at": "2026-06-19"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-06-22"
-      },
-      {
-        "stage": "at_healthcode",
+        "stage": "at_medserv",
         "at": "2026-06-22"
       },
       {
@@ -4199,144 +3955,276 @@
     "source": "seed"
   },
   {
-    "id": "inv_0085",
-    "invoice_number": "INV-2026-0106",
-    "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "H.M-4588",
-    "description": "Initial consultation",
-    "total": 250.0,
-    "amount_due": 250.0,
-    "middleman_fee": 7.5,
-    "currency": "GBP",
-    "issued_date": "2026-06-22",
-    "submitted_date": "2026-06-22",
-    "expected_payment_date": "2026-08-10",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-22"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-22"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-22"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-26"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0023",
-    "invoice_number": "INV-2026-0107",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "T.L-5272",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 320.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
-    "issued_date": "2026-06-26",
-    "submitted_date": "2026-06-26",
-    "expected_payment_date": "2026-08-11",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-26"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-26"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-26"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-06-27"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0030",
-    "invoice_number": "INV-2026-0108",
+    "id": "inv_0006",
+    "invoice_number": "INV-2026-0105",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "H.F-3900",
+    "patient_ref": "D.D-3064",
     "description": "NHS clinic session",
     "total": 320.0,
     "amount_due": 320.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-06-28",
-    "submitted_date": "2026-06-30",
-    "expected_payment_date": "2026-07-29",
+    "issued_date": "2026-06-19",
+    "submitted_date": "2026-06-21",
+    "expected_payment_date": "2026-07-22",
     "paid_date": null,
     "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-06-28"
+        "at": "2026-06-19"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-06-28"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-30"
+        "stage": "at_medserv",
+        "at": "2026-06-21"
       },
       {
         "stage": "with_insurer",
-        "at": "2026-07-04"
+        "at": "2026-06-22"
       }
     ],
     "validation_issues": [],
     "source": "seed"
   },
   {
-    "id": "inv_0115",
-    "invoice_number": "INV-2026-0109",
+    "id": "inv_0096",
+    "invoice_number": "INV-2026-0106",
     "payer_type": "private_insurer",
-    "insurer_name": "Aviva",
-    "patient_ref": "K.J-1920",
+    "insurer_name": "AXA Health",
+    "patient_ref": "H.P-7024",
+    "description": "Initial consultation",
+    "total": 250.0,
+    "amount_due": 250.0,
+    "middleman_fee": 7.5,
+    "currency": "GBP",
+    "issued_date": "2026-06-19",
+    "submitted_date": "2026-06-22",
+    "expected_payment_date": "2026-08-03",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-19"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-22"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-24"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0108",
+    "invoice_number": "INV-2026-0107",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "T.H-4593",
     "description": "Major procedure",
     "total": 900.0,
     "amount_due": 900.0,
     "middleman_fee": 27.0,
     "currency": "GBP",
-    "issued_date": "2026-06-28",
-    "submitted_date": "2026-06-30",
-    "expected_payment_date": "2026-08-16",
+    "issued_date": "2026-06-19",
+    "submitted_date": "2026-06-22",
+    "expected_payment_date": "2026-08-04",
     "paid_date": null,
     "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-06-28"
+        "at": "2026-06-19"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-06-28"
+        "stage": "at_medserv",
+        "at": "2026-06-22"
       },
       {
-        "stage": "at_healthcode",
+        "stage": "with_insurer",
+        "at": "2026-06-25"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0033",
+    "invoice_number": "INV-2026-0108",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "W.E-9630",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 320.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-06-21",
+    "submitted_date": "2026-06-23",
+    "expected_payment_date": "2026-07-26",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-21"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-23"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-26"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0049",
+    "invoice_number": "INV-2026-0109",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "L.B-5579",
+    "description": "Medical report",
+    "total": 120.0,
+    "amount_due": 120.0,
+    "middleman_fee": 3.6,
+    "currency": "GBP",
+    "issued_date": "2026-06-23",
+    "submitted_date": "2026-06-24",
+    "expected_payment_date": "2026-08-04",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-23"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-24"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-25"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0100",
+    "invoice_number": "INV-2026-0110",
+    "payer_type": "private_insurer",
+    "insurer_name": "AXA Health",
+    "patient_ref": "M.D-6533",
+    "description": "Follow-up consultation",
+    "total": 150.0,
+    "amount_due": 150.0,
+    "middleman_fee": 4.5,
+    "currency": "GBP",
+    "issued_date": "2026-06-24",
+    "submitted_date": "2026-06-26",
+    "expected_payment_date": "2026-08-09",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-24"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-26"
+      },
+      {
+        "stage": "with_insurer",
         "at": "2026-06-30"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0085",
+    "invoice_number": "INV-2026-0111",
+    "payer_type": "private_insurer",
+    "insurer_name": "Vitality",
+    "patient_ref": "L.M-9836",
+    "description": "Medical report",
+    "total": 120.0,
+    "amount_due": 120.0,
+    "middleman_fee": 3.6,
+    "currency": "GBP",
+    "issued_date": "2026-06-25",
+    "submitted_date": "2026-06-27",
+    "expected_payment_date": "2026-08-09",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-25"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-27"
+      },
+      {
+        "stage": "with_insurer",
+        "at": "2026-06-30"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0005",
+    "invoice_number": "INV-2026-0112",
+    "payer_type": "private_insurer",
+    "insurer_name": "Aviva",
+    "patient_ref": "C.M-3083",
+    "description": "Major procedure",
+    "total": 900.0,
+    "amount_due": 900.0,
+    "middleman_fee": 27.0,
+    "currency": "GBP",
+    "issued_date": "2026-06-26",
+    "submitted_date": "2026-06-28",
+    "expected_payment_date": "2026-08-16",
+    "paid_date": null,
+    "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-06-26"
+      },
+      {
+        "stage": "at_medserv",
+        "at": "2026-06-28"
       },
       {
         "stage": "with_insurer",
@@ -4347,36 +4235,65 @@
     "source": "seed"
   },
   {
-    "id": "inv_0052",
-    "invoice_number": "INV-2026-0110",
+    "id": "inv_0075",
+    "invoice_number": "INV-2026-0113",
     "payer_type": "private_insurer",
-    "insurer_name": "Vitality",
-    "patient_ref": "C.T-6590",
-    "description": "Initial consultation",
-    "total": 250.0,
-    "amount_due": 250.0,
-    "middleman_fee": 7.5,
+    "insurer_name": "Aviva",
+    "patient_ref": "E.W-1094",
+    "description": "Medical report",
+    "total": 120.0,
+    "amount_due": 120.0,
+    "middleman_fee": 3.6,
     "currency": "GBP",
-    "issued_date": "2026-06-29",
-    "submitted_date": "2026-06-29",
-    "expected_payment_date": "2026-08-16",
+    "issued_date": "2026-06-27",
+    "submitted_date": "2026-06-30",
+    "expected_payment_date": "2026-08-17",
     "paid_date": null,
     "pipeline_status": "with_insurer",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-06-29"
+        "at": "2026-06-27"
       },
       {
-        "stage": "at_semble",
-        "at": "2026-06-29"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-29"
+        "stage": "at_medserv",
+        "at": "2026-06-30"
       },
       {
         "stage": "with_insurer",
+        "at": "2026-07-03"
+      }
+    ],
+    "validation_issues": [],
+    "source": "seed"
+  },
+  {
+    "id": "inv_0111",
+    "invoice_number": "INV-2026-0114",
+    "payer_type": "nhs",
+    "insurer_name": "NHS England",
+    "patient_ref": "H.M-8168",
+    "description": "NHS clinic session",
+    "total": 320.0,
+    "amount_due": 320.0,
+    "middleman_fee": 0.0,
+    "currency": "GBP",
+    "issued_date": "2026-07-01",
+    "submitted_date": "2026-07-02",
+    "expected_payment_date": "2026-08-05",
+    "paid_date": null,
+    "pipeline_status": "at_medserv",
+    "query_reason": null,
+    "last_chased_at": null,
+    "timeline": [
+      {
+        "stage": "draft",
+        "at": "2026-07-01"
+      },
+      {
+        "stage": "at_medserv",
         "at": "2026-07-02"
       }
     ],
@@ -4385,173 +4302,25 @@
   },
   {
     "id": "inv_0112",
-    "invoice_number": "INV-2026-0111",
-    "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "C.N-6083",
-    "description": "Initial consultation",
-    "total": 250.0,
-    "amount_due": 250.0,
-    "middleman_fee": 7.5,
-    "currency": "GBP",
-    "issued_date": "2026-06-30",
-    "submitted_date": "2026-06-30",
-    "expected_payment_date": "2026-08-16",
-    "paid_date": null,
-    "pipeline_status": "with_insurer",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-06-30"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-06-30"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-06-30"
-      },
-      {
-        "stage": "with_insurer",
-        "at": "2026-07-02"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0070",
-    "invoice_number": "INV-2026-0112",
-    "payer_type": "private_insurer",
-    "insurer_name": "WPA",
-    "patient_ref": "A.W-8569",
-    "description": "Medical report",
-    "total": 120.0,
-    "amount_due": 120.0,
-    "middleman_fee": 3.6,
-    "currency": "GBP",
-    "issued_date": "2026-07-01",
-    "submitted_date": "2026-07-01",
-    "expected_payment_date": "2026-08-19",
-    "paid_date": null,
-    "pipeline_status": "rejected",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-07-01"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-07-01"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-07-01"
-      },
-      {
-        "stage": "rejected",
-        "at": "2026-07-02"
-      }
-    ],
-    "validation_issues": [
-      {
-        "field": "Treatment Date",
-        "error": "Outside policy cover period",
-        "solution": "Verify the policy start date; attach pre-authorisation if cover was agreed."
-      }
-    ],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0081",
-    "invoice_number": "INV-2026-0113",
+    "invoice_number": "INV-2026-0115",
     "payer_type": "nhs",
     "insurer_name": "NHS England",
-    "patient_ref": "T.P-3950",
+    "patient_ref": "S.R-9985",
     "description": "NHS clinic session",
     "total": 320.0,
     "amount_due": 320.0,
     "middleman_fee": 0.0,
     "currency": "GBP",
-    "issued_date": "2026-07-01",
-    "submitted_date": "2026-07-03",
-    "expected_payment_date": "2026-07-31",
-    "paid_date": null,
-    "pipeline_status": "at_healthcode",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-07-01"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-07-01"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-07-03"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0058",
-    "invoice_number": "INV-2026-0114",
-    "payer_type": "private_insurer",
-    "insurer_name": "Bupa",
-    "patient_ref": "F.G-4545",
-    "description": "Minor procedure",
-    "total": 450.0,
-    "amount_due": 450.0,
-    "middleman_fee": 13.5,
-    "currency": "GBP",
-    "issued_date": "2026-07-03",
-    "submitted_date": "2026-07-03",
-    "expected_payment_date": "2026-08-19",
-    "paid_date": null,
-    "pipeline_status": "at_healthcode",
-    "timeline": [
-      {
-        "stage": "draft",
-        "at": "2026-07-03"
-      },
-      {
-        "stage": "at_semble",
-        "at": "2026-07-03"
-      },
-      {
-        "stage": "at_healthcode",
-        "at": "2026-07-03"
-      }
-    ],
-    "validation_issues": [],
-    "source": "seed"
-  },
-  {
-    "id": "inv_0077",
-    "invoice_number": "INV-2026-0115",
-    "payer_type": "private_insurer",
-    "insurer_name": "AXA Health",
-    "patient_ref": "L.D-8213",
-    "description": "Diagnostic review",
-    "total": 320.0,
-    "amount_due": 320.0,
-    "middleman_fee": 9.6,
-    "currency": "GBP",
     "issued_date": "2026-07-04",
     "submitted_date": null,
     "expected_payment_date": null,
     "paid_date": null,
-    "pipeline_status": "at_semble",
+    "pipeline_status": "draft",
+    "query_reason": null,
+    "last_chased_at": null,
     "timeline": [
       {
         "stage": "draft",
-        "at": "2026-07-04"
-      },
-      {
-        "stage": "at_semble",
         "at": "2026-07-04"
       }
     ],

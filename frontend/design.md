@@ -17,9 +17,9 @@ colors:
     series-3: "#eda100"
     series-4: "#4a3aa7"
     stage-draft: "#86b6ef"
-    stage-submitted: "#5598e7"
-    stage-healthcode: "#2a78d6"
+    stage-medserv: "#2a78d6"
     stage-insurer: "#1c5cab"
+    status-query: "#ec835a"
     status-paid: "#0ca30c"
     status-overdue: "#fab219"
     status-stuck: "#ec835a"
@@ -40,9 +40,9 @@ colors:
     series-3: "#c98500"
     series-4: "#9085e9"
     stage-draft: "#86b6ef"
-    stage-submitted: "#5598e7"
-    stage-healthcode: "#3987e5"
+    stage-medserv: "#3987e5"
     stage-insurer: "#1c5cab"
+    status-query: "#ec835a"
     status-paid: "#0ca30c"
     status-overdue: "#fab219"
     status-stuck: "#ec835a"
@@ -86,7 +86,7 @@ The palette is the validated data-viz reference set; both modes passed the six-c
 
 Roles, not raw hex, everywhere. The two income streams have fixed identities: NHS is always `series-nhs` (blue), private clinic is always `series-private` (aqua). A filter that hides one series never repaints the other.
 
-Pipeline stages are an ordinal blue ramp that darkens as money moves toward the doctor: `stage-draft` → `stage-submitted` → `stage-healthcode` → `stage-insurer`. Terminal states leave the ramp: `status-paid` (green), `status-rejected` (red). Exceptions ride on top: `status-overdue` (amber) and `status-stuck` (orange) flag age, not position. Status colors never appear as chart series and never appear without an icon and a label (C01, C22).
+Pipeline stages are an ordinal blue ramp that darkens as money moves toward the doctor: `stage-draft` → `stage-medserv` → `stage-insurer`. Terminal states leave the ramp: `status-paid` (green), `status-rejected` (red). The insurer-query state wears `status-query` (orange): actively blocked, not merely slow. Exceptions ride on top: `status-overdue` (amber) and `status-stuck` (orange) flag age, not position. Status colors never appear as chart series and never appear without an icon and a label (C01, C22).
 
 Relief rule from the validator: `series-private` and `series-3` sit below 3:1 on the light surface, so any chart using them ships visible direct labels or a table toggle. We ship direct labels by default.
 
@@ -96,10 +96,10 @@ One family, the system sans, at every size including the hero figure. Money colu
 
 ## Layout & Spacing
 
-- One chrome layer: a single 56px header with the product name, four nav items (Overview, Invoices, Compare, Settings) and a global search. No second toolbar, no sidebar. Evidence: every product with stacked chrome or a 12-item rail scored poorly on findability (C01, C04, C05, C17).
+- One chrome layer: a fixed 216px left sidebar (OpenClaw Control-UI structure): brand strip, grouped nav with uppercase section labels (Work: Overview, Invoices, Fix queue; Insight: Compare; System: Settings), a live stuck-count badge on Fix queue, and connection status in the footer. Still five destinations; every product with a 12-plus-item rail scored poorly on findability (C02, C05, C17).
 - Content column capped at 1240px, 24px gaps between sections, cards on the `page` plane with `surface` fill.
 - The Overview grid: hero cashflow card full-width, then a three-card KPI row, then the pipeline bar, then the action queue. The hero is never below the fold.
-- Responsive: single column below 900px. No separate mobile app for the MVP.
+- Responsive: below 900px the sidebar collapses to a horizontal strip and content goes single column. No separate mobile app for the MVP.
 
 ## Elevation & Depth
 
@@ -115,8 +115,9 @@ Cards at 10px radius, controls at 8px, chips fully rounded. Chart marks are thin
 - KPI card. Number, delta arrow with plain-language comparison, one-sentence explainer, in the Tebra/Xero grammar (C09, C16). MVP set: outstanding total, median days to payment per payer ("Payment velocity", C09), fees paid to middlemen this year.
 - Pipeline money bar. One segmented horizontal bar, each lifecycle stage labeled with £ amount and count, in the QuickBooks two-stage money bar pattern (C17). Clicking a segment filters the invoice table (donut-as-filter behavior, C07, in bar form). Repeated identically on Overview and Invoices so the mental model carries (C17).
 - Status chip. Color plus icon plus label, always all three (C20). Stage chips add days-in-stage when older than 7 days: "With insurer · 12d", following "Overdue 47 days" (C17). Never a bare dot (C01, C06, C22).
-- Invoice row. Number, patient ref, payer chip (NHS or insurer name), amount, stage chip, expected date, inline action (Fix, Chase, or View). The row expands in place to the dated timeline (C01): Draft → Submitted to Semble → At Healthcode → With insurer → Paid, each stage with a timestamp, the current stage pulsing. Nothing dead-ends at "Collected" (C21, C22).
+- Invoice row. Number, patient ref, payer chip (NHS or insurer name), amount, stage chip, expected date, inline action (Fix, Chase, or View). The row expands in place to the dated timeline (C01): Draft → At Medserv → With insurer → Paid, each stage with a timestamp, the current stage pulsing; rejection and insurer-query nodes branch where they happened. Nothing dead-ends at "collected" (C21, C22).
 - Validation panel. Pre-submission checks as named rows with pass/fail chips and one-line explanations (C10). Failures use the Field / Error / Solution triplet (C22). A live counter gates submission: the Submit button stays disabled until "0 issues remaining" (C02).
+- Fix queue. The orchestration centre: every stuck invoice matches exactly one deterministic rule (rejected, insurer query, shortfall, past insurer SLA, stalled at Medserv, never submitted; checked in that order) and each rule prescribes one action. Groups carry a severity accent and £ total; rows sort by money at stake; the rulebook and per-insurer SLA table are printed on Settings. Grouping errors by fix type is the CareCloud inbox pattern (C12); the gate-until-zero idea is Cerner's (C02).
 - Action queue. "Needs attention" list with counts per reason (Rejected 2, Missing data 1, Stale 14d+ 3), each row carrying its inline fix action (C10, C15, C22).
 - Compare view. Private versus NHS as paired series in the two fixed hues: dual-series bars for monthly income (C19), side-by-side aging buckets (C14), rejection rate and payment velocity per payer (C09). Comparison date ranges spelled out in plain text under the title (C19).
 - Empty states. Every panel teaches: a SAMPLE-badged preview of the populated state plus one call to action (C16, C17). Positive empty state for a clean queue: "No invoices need attention" (C15). Never a silent blank (C02, C05).

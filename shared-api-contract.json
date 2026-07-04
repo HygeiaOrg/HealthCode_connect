@@ -8,14 +8,19 @@
     "GET /analytics/summary": "Returns Summary.",
     "GET /analytics/cashflow": "Returns Cashflow: monthly received (actuals) and expected (projection from outstanding expected_payment dates).",
     "GET /analytics/compare": "Returns Compare: per-payer-type rollups for the private-vs-NHS view.",
+    "POST /invoices/{id}/resubmit": "Fix-queue action: marks validation issues resolved, moves rejected -> at_medserv, appends a timeline event. Returns the updated Invoice.",
+    "POST /invoices/{id}/reply": "Fix-queue action: answers an insurer query, moves insurer_query -> with_insurer. Body: { message: string }. Returns the updated Invoice.",
+    "POST /invoices/{id}/submit": "Fix-queue action: submits a draft, draft -> at_medserv. Returns the updated Invoice.",
+    "POST /invoices/{id}/chase": "Fix-queue action: records a chaser to the insurer; sets last_chased_at. Returns the updated Invoice.",
+    "POST /invoices/{id}/resolve": "Fix-queue action: clears a shortfall balance after billing the patient or writing it off (amount_due -> 0). Returns the updated Invoice.",
     "GET /xero/status": "Existing endpoint, unchanged: Xero connection check.",
     "notes": "Existing GET /xero/invoices and /xero/contacts stay as-is for raw Xero passthrough. New endpoints above serve the app; in the interim the backend may derive them from seeds.json exactly like the frontend mock does."
   },
   "definitions": {
     "PipelineStatus": {
       "type": "string",
-      "enum": ["draft", "at_semble", "at_healthcode", "with_insurer", "paid", "rejected"],
-      "description": "Lifecycle position. UI labels: Draft / At Semble / At Healthcode / With insurer / Paid / Rejected. Overdue and stuck are derived in the UI from dates, not stored states."
+      "enum": ["draft", "at_medserv", "with_insurer", "insurer_query", "paid", "rejected"],
+      "description": "Lifecycle position. Draft (with the practice) -> At Medserv (billing agent) -> With insurer -> Paid. Rejected branches at Medserv validation; insurer_query means the insurer returned it asking for information. Overdue, stalled, and shortfall are derived deterministically from dates and amounts, not stored."
     },
     "PayerType": { "type": "string", "enum": ["private_insurer", "nhs"] },
     "ValidationIssue": {
@@ -54,6 +59,8 @@
         "expected_payment_date": { "type": ["string", "null"], "format": "date" },
         "paid_date": { "type": ["string", "null"], "format": "date" },
         "pipeline_status": { "$ref": "#/definitions/PipelineStatus" },
+        "query_reason": { "type": ["string", "null"], "description": "Set when pipeline_status is insurer_query: what the insurer asked for." },
+        "last_chased_at": { "type": ["string", "null"], "format": "date" },
         "timeline": { "type": "array", "items": { "$ref": "#/definitions/TimelineEvent" } },
         "validation_issues": { "type": "array", "items": { "$ref": "#/definitions/ValidationIssue" } },
         "source": { "type": "string", "enum": ["xero", "seed"] }

@@ -2,9 +2,9 @@
 
 export type PipelineStatus =
   | 'draft'
-  | 'at_semble'
-  | 'at_healthcode'
+  | 'at_medserv'
   | 'with_insurer'
+  | 'insurer_query'
   | 'paid'
   | 'rejected'
 
@@ -37,6 +37,8 @@ export interface Invoice {
   expected_payment_date: string | null
   paid_date: string | null
   pipeline_status: PipelineStatus
+  query_reason: string | null
+  last_chased_at: string | null
   timeline: TimelineEvent[]
   validation_issues: ValidationIssue[]
   source: 'xero' | 'seed'

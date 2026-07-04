@@ -11,12 +11,13 @@ export interface StageMeta {
   icon: string
 }
 
-// Ordinal blue ramp: money darkens as it moves toward the doctor (design.md).
+// In-flight stages ride the ordinal blue ramp: money darkens as it moves toward
+// the doctor (design.md). Query, paid, and rejected are exception/terminal colors.
 export const STAGES: StageMeta[] = [
   { key: 'draft', label: 'Draft', cssVar: 'var(--stage-draft)', lightText: false, icon: '✎' },
-  { key: 'at_semble', label: 'At Semble', cssVar: 'var(--stage-semble)', lightText: true, icon: '●' },
-  { key: 'at_healthcode', label: 'At Healthcode', cssVar: 'var(--stage-healthcode)', lightText: true, icon: '●' },
+  { key: 'at_medserv', label: 'At Medserv', cssVar: 'var(--stage-medserv)', lightText: true, icon: '●' },
   { key: 'with_insurer', label: 'With insurer', cssVar: 'var(--stage-insurer)', lightText: true, icon: '●' },
+  { key: 'insurer_query', label: 'Insurer query', cssVar: 'var(--stuck)', lightText: true, icon: '?' },
   { key: 'paid', label: 'Paid', cssVar: 'var(--paid)', lightText: true, icon: '✓' },
   { key: 'rejected', label: 'Rejected', cssVar: 'var(--rejected)', lightText: true, icon: '✕' },
 ]
@@ -36,11 +37,8 @@ export const daysInStage = (inv: Invoice): number => {
   return last ? daysBetween(last.at, TODAY) : 0
 }
 
-export const isOverdue = (inv: Invoice): boolean =>
-  inv.pipeline_status !== 'paid' &&
-  inv.pipeline_status !== 'rejected' &&
-  !!inv.expected_payment_date &&
-  new Date(inv.expected_payment_date) < TODAY
+export const isLive = (inv: Invoice): boolean =>
+  inv.pipeline_status !== 'paid' && inv.pipeline_status !== 'rejected'
 
-export const isStale = (inv: Invoice): boolean =>
-  inv.pipeline_status !== 'paid' && inv.pipeline_status !== 'rejected' && daysInStage(inv) >= 14
+export const isOverdue = (inv: Invoice): boolean =>
+  isLive(inv) && !!inv.expected_payment_date && new Date(inv.expected_payment_date) < TODAY
