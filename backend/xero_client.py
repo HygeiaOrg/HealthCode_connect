@@ -11,6 +11,9 @@ XERO_CLIENT_ID = os.getenv("XERO_CLIENT_ID")
 XERO_CLIENT_SECRET = os.getenv("XERO_CLIENT_SECRET")
 
 
+from oauthlib.oauth2 import BackendApplicationClient
+from requests_oauthlib import OAuth2Session
+
 def get_xero_client() -> ApiClient:
     """
     Initializes and returns the Xero ApiClient configured for Client Credentials flow.
@@ -21,16 +24,36 @@ def get_xero_client() -> ApiClient:
             "XERO_CLIENT_ID and XERO_CLIENT_SECRET must be set in the .env file."
         )
     
-    # Configure ApiClient with Client Credentials
+    # 1. Fetch token explicitly
+    client = BackendApplicationClient(client_id=XERO_CLIENT_ID)
+    oauth = OAuth2Session(client=client)
+    token = oauth.fetch_token(
+        token_url="https://identity.xero.com/connect/token",
+        client_id=XERO_CLIENT_ID,
+        client_secret=XERO_CLIENT_SECRET,
+        scope=["accounting.transactions", "accounting.contacts"]
+    )
+    
+    # 2. Configure ApiClient
+    def token_getter():
+        return token
+    def token_saver(token_obj):
+        pass
+
     config = Configuration(
         oauth2_token=OAuth2Token(
             client_id=XERO_CLIENT_ID,
-            client_secret=XERO_CLIENT_SECRET,
-            grant_type="client_credentials"
+            client_secret=XERO_CLIENT_SECRET
         )
     )
     
-    return ApiClient(config)
+    api_client = ApiClient(
+        config,
+        oauth2_token_getter=token_getter,
+        oauth2_token_saver=token_saver
+    )
+    api_client.set_oauth2_token(token)
+    return api_client
 
 def get_accounting_api() -> AccountingApi:
     """

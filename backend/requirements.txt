@@ -2,6 +2,11 @@ fastapi==0.103.1
 uvicorn==0.23.2
 xero-python
 python-dotenv
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+PyPDF2
+requests
 jsonschema>=4.21
 
 # dev/test
