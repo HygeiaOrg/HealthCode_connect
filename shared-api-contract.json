@@ -1,15 +1,147 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Hackathon API Contract",
-  "description": "Shared schema defining the data structure between frontend and backend.",
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "id": { "type": "string" },
-      "title": { "type": "string" },
-      "status": { "type": "string", "enum": ["pending", "active", "completed"] }
+  "title": "HealthCode Connect API Contract",
+  "description": "Single source of truth for data shapes between frontend and backend. The frontend ships a mock mode that serves exactly these shapes from backend/seeds.json; the real backend must match them. Dates are ISO 8601 (YYYY-MM-DD). Money is GBP in pounds as numbers (not pence).",
+  "x-endpoints": {
+    "GET /invoices": "Returns Invoice[]. Optional query params: payer_type (private_insurer|nhs), status (PipelineStatus), q (search in invoice_number/patient_ref/insurer_name).",
+    "GET /invoices/{id}": "Returns one Invoice.",
+    "GET /analytics/summary": "Returns Summary.",
+    "GET /analytics/cashflow": "Returns Cashflow: monthly received (actuals) and expected (projection from outstanding expected_payment dates).",
+    "GET /analytics/compare": "Returns Compare: per-payer-type rollups for the private-vs-NHS view.",
+    "GET /xero/status": "Existing endpoint, unchanged: Xero connection check.",
+    "notes": "Existing GET /xero/invoices and /xero/contacts stay as-is for raw Xero passthrough. New endpoints above serve the app; in the interim the backend may derive them from seeds.json exactly like the frontend mock does."
+  },
+  "definitions": {
+    "PipelineStatus": {
+      "type": "string",
+      "enum": ["draft", "at_semble", "at_healthcode", "with_insurer", "paid", "rejected"],
+      "description": "Lifecycle position. UI labels: Draft / At Semble / At Healthcode / With insurer / Paid / Rejected. Overdue and stuck are derived in the UI from dates, not stored states."
     },
-    "required": ["id", "title", "status"]
+    "PayerType": { "type": "string", "enum": ["private_insurer", "nhs"] },
+    "ValidationIssue": {
+      "type": "object",
+      "description": "Healthcode-style Field / Error / Solution triplet.",
+      "properties": {
+        "field": { "type": "string" },
+        "error": { "type": "string" },
+        "solution": { "type": "string" }
+      },
+      "required": ["field", "error", "solution"]
+    },
+    "TimelineEvent": {
+      "type": "object",
+      "properties": {
+        "stage": { "$ref": "#/definitions/PipelineStatus" },
+        "at": { "type": "string", "format": "date" }
+      },
+      "required": ["stage", "at"]
+    },
+    "Invoice": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "invoice_number": { "type": "string" },
+        "payer_type": { "$ref": "#/definitions/PayerType" },
+        "insurer_name": { "type": "string", "description": "Insurer for private, 'NHS England' for NHS work." },
+        "patient_ref": { "type": "string", "description": "Pseudonymous reference, never a full name." },
+        "description": { "type": "string" },
+        "total": { "type": "number" },
+        "amount_due": { "type": "number" },
+        "middleman_fee": { "type": "number", "description": "3% clearing fee on private insurer invoices, 0 for NHS." },
+        "currency": { "type": "string", "const": "GBP" },
+        "issued_date": { "type": "string", "format": "date" },
+        "submitted_date": { "type": ["string", "null"], "format": "date", "description": "Date it left Semble for Healthcode." },
+        "expected_payment_date": { "type": ["string", "null"], "format": "date" },
+        "paid_date": { "type": ["string", "null"], "format": "date" },
+        "pipeline_status": { "$ref": "#/definitions/PipelineStatus" },
+        "timeline": { "type": "array", "items": { "$ref": "#/definitions/TimelineEvent" } },
+        "validation_issues": { "type": "array", "items": { "$ref": "#/definitions/ValidationIssue" } },
+        "source": { "type": "string", "enum": ["xero", "seed"] }
+      },
+      "required": ["id", "invoice_number", "payer_type", "insurer_name", "patient_ref", "total", "amount_due", "middleman_fee", "currency", "issued_date", "pipeline_status", "timeline", "validation_issues", "source"]
+    },
+    "Summary": {
+      "type": "object",
+      "properties": {
+        "outstanding_total": { "type": "number" },
+        "expected_this_month": { "type": "number" },
+        "expected_this_month_by": { "type": ["string", "null"], "format": "date", "description": "Latest expected date inside the current month, for the hero headline." },
+        "overdue_total": { "type": "number", "description": "Sum of amount_due where expected_payment_date is past." },
+        "median_days_to_payment": {
+          "type": "object",
+          "properties": { "private_insurer": { "type": ["number", "null"] }, "nhs": { "type": ["number", "null"] } },
+          "required": ["private_insurer", "nhs"]
+        },
+        "fees_paid_ytd": { "type": "number" },
+        "rejected_count": { "type": "integer" },
+        "stale_count": { "type": "integer", "description": "In flight with no stage change for 14+ days." },
+        "pipeline_totals": {
+          "type": "array",
+          "description": "One entry per PipelineStatus with £ and count, for the pipeline money bar.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "status": { "$ref": "#/definitions/PipelineStatus" },
+              "amount": { "type": "number" },
+              "count": { "type": "integer" }
+            },
+            "required": ["status", "amount", "count"]
+          }
+        }
+      },
+      "required": ["outstanding_total", "expected_this_month", "overdue_total", "median_days_to_payment", "fees_paid_ytd", "rejected_count", "stale_count", "pipeline_totals"]
+    },
+    "CashflowMonth": {
+      "type": "object",
+      "properties": {
+        "month": { "type": "string", "description": "YYYY-MM" },
+        "received": { "type": "number" },
+        "expected": { "type": "number", "description": "Projection for current/future months from outstanding expected_payment dates." }
+      },
+      "required": ["month", "received", "expected"]
+    },
+    "Cashflow": {
+      "type": "object",
+      "properties": { "months": { "type": "array", "items": { "$ref": "#/definitions/CashflowMonth" } } },
+      "required": ["months"]
+    },
+    "PayerRollup": {
+      "type": "object",
+      "properties": {
+        "payer_type": { "$ref": "#/definitions/PayerType" },
+        "invoice_count": { "type": "integer" },
+        "total_billed": { "type": "number" },
+        "total_received": { "type": "number" },
+        "outstanding": { "type": "number" },
+        "median_days_to_payment": { "type": ["number", "null"] },
+        "rejection_rate": { "type": "number", "description": "0..1" },
+        "fees_paid": { "type": "number" },
+        "aging": {
+          "type": "object",
+          "description": "Outstanding £ by age of invoice since issue.",
+          "properties": {
+            "b0_30": { "type": "number" },
+            "b31_60": { "type": "number" },
+            "b61_90": { "type": "number" },
+            "b91_plus": { "type": "number" }
+          },
+          "required": ["b0_30", "b31_60", "b61_90", "b91_plus"]
+        },
+        "monthly_billed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": { "month": { "type": "string" }, "amount": { "type": "number" } },
+            "required": ["month", "amount"]
+          }
+        }
+      },
+      "required": ["payer_type", "invoice_count", "total_billed", "total_received", "outstanding", "median_days_to_payment", "rejection_rate", "fees_paid", "aging", "monthly_billed"]
+    },
+    "Compare": {
+      "type": "object",
+      "properties": { "by_payer": { "type": "array", "items": { "$ref": "#/definitions/PayerRollup" } } },
+      "required": ["by_payer"]
+    }
   }
 }
