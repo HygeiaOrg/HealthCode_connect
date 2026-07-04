@@ -1,0 +1,13 @@
+{
+  "_note": "Service/charge codes mapped to Industry Standard Codes (the VEDA 'Provider Chargecode - Code not Mapped' rule). vat_exempt reflects VAT Notice 701/57: services whose primary purpose is the protection, maintenance or restoration of health are exempt.",
+  "codes": {
+    "CONS-INIT": { "description": "Initial consultation", "vat_exempt": true, "billable_insurers": "all" },
+    "CONS-FU": { "description": "Follow-up consultation", "vat_exempt": true, "billable_insurers": "all" },
+    "PROC-MINOR": { "description": "Minor procedure", "vat_exempt": true, "billable_insurers": "all" },
+    "PROC-MAJOR": { "description": "Major procedure", "vat_exempt": true, "billable_insurers": "all" },
+    "DIAG-REVIEW": { "description": "Diagnostic review", "vat_exempt": true, "billable_insurers": "all" },
+    "REPORT-MED": { "description": "Medical report (non-treatment)", "vat_exempt": false, "billable_insurers": ["wpa", "allianz"] },
+    "NHS-SESSION": { "description": "NHS clinic session", "vat_exempt": true, "billable_insurers": ["nhs_england"] },
+    "NHS-SURG": { "description": "NHS surgical list", "vat_exempt": true, "billable_insurers": ["nhs_england"] }
+  }
+}

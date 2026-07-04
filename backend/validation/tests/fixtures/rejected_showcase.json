@@ -1,0 +1,49 @@
+{
+  "invoice_number": "INV-2026-0032",
+  "invoice_date": "2026-07-04",
+  "currency": "GBP",
+  "practice": {
+    "name": "Harley Street Practice Ltd",
+    "address_line1": "12 Harley Street, London",
+    "postcode": "W1G 9PF"
+  },
+  "patient": {
+    "title": "Mr",
+    "first_name": "Paul",
+    "surname": "Whitmore",
+    "date_of_birth": "1972-11-02",
+    "sex": "M",
+    "address_line1": "9 Larch Way, Reading",
+    "postcode": "RG1 999",
+    "nhs_number": "9434765918"
+  },
+  "policy": {
+    "insurer_id": "bupa",
+    "membership_number": "BUP99120044",
+    "pre_authorisation": "AUTH-1"
+  },
+  "provider": {
+    "specialist_name": "Dr E. Whitfield",
+    "gmc_number": "7031558",
+    "payee_provider_id": "PP-4402",
+    "treatment_site_id": "SITE-021"
+  },
+  "episode": {
+    "care_setting": "outpatient",
+    "treatment_date": "2026-06-28",
+    "admission_date": null,
+    "discharge_date": null,
+    "diagnoses": ["M17.2"],
+    "procedures": ["W4310"]
+  },
+  "lines": [
+    {
+      "service_code": "PROC-MAJOR",
+      "description": "Major procedure",
+      "quantity": 1,
+      "unit_fee": 900.0,
+      "vat_rate": 0
+    }
+  ],
+  "totals": { "net": 900.0, "vat": 0, "gross": 900.0 }
+}

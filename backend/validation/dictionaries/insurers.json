@@ -1,0 +1,13 @@
+{
+  "_note": "Insurer registry. membership_format: regex where the format is published (Healthcode validation rules); null means the insurer validates against its live membership database, so the engine checks presence plus the demographic-match inputs (surname, DOB, postcode) instead. sla_days must stay in sync with frontend/src/lib/triage.ts.",
+  "insurers": {
+    "bupa": { "name": "Bupa", "membership_format": null, "requires_icd10": true, "preauth_format": "^[0-9]{8}$", "sla_days": 35 },
+    "axa_health": { "name": "AXA Health", "membership_format": null, "requires_icd10": true, "preauth_format": "^[A-Z0-9]{6,10}$", "sla_days": 40 },
+    "aviva": { "name": "Aviva", "membership_format": null, "requires_icd10": false, "preauth_format": "^[0-9]{6,8}$", "sla_days": 45 },
+    "vitality": { "name": "Vitality", "membership_format": null, "requires_icd10": true, "preauth_format": "^[A-Z]{2}[0-9]{6}$", "sla_days": 40 },
+    "wpa": { "name": "WPA", "membership_format": "^[0-9]{5,9}$", "requires_icd10": false, "preauth_format": "^[0-9]{6}$", "sla_days": 30 },
+    "bupa_global": { "name": "Bupa Global", "membership_format": "^[A-Z]{2}-[0-9]{4}-[0-9]{4}-[0-9]{4}$", "requires_icd10": true, "preauth_format": "^[0-9]{8}$", "sla_days": 45 },
+    "allianz": { "name": "Allianz Partners", "membership_format": "^P[0-9]{4,9}$", "requires_icd10": false, "preauth_format": "^[A-Z0-9]{8}$", "sla_days": 40 },
+    "nhs_england": { "name": "NHS England", "membership_format": null, "requires_icd10": false, "preauth_format": null, "sla_days": 30 }
+  }
+}

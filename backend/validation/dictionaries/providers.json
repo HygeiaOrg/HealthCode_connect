@@ -1,0 +1,17 @@
+{
+  "_note": "Demo private-practice register, modelled on Healthcode's PPR: each specialist and each payee/site must be recognised AND mapped to the invoice's insurer, or the bill fails with the VEDA 'Invalid Code / Not Mapped' family.",
+  "specialists": {
+    "4479761": { "name": "Dr T. Okafor", "specialty": "General surgery", "insurers": ["bupa", "axa_health", "aviva", "vitality", "wpa", "nhs_england"] },
+    "6123094": { "name": "Dr S. Rahman", "specialty": "Cardiology", "insurers": ["bupa", "axa_health", "aviva", "nhs_england"] },
+    "7031558": { "name": "Dr E. Whitfield", "specialty": "Orthopaedics", "insurers": ["bupa", "vitality", "wpa", "allianz", "nhs_england"] }
+  },
+  "payee_providers": {
+    "PP-4402": { "name": "Harley Street Practice Ltd", "insurers": ["bupa", "axa_health", "aviva", "vitality", "wpa", "allianz", "bupa_global", "nhs_england"] },
+    "PP-9910": { "name": "T. Okafor Medical Services", "insurers": ["bupa", "aviva", "wpa", "nhs_england"] }
+  },
+  "treatment_sites": {
+    "SITE-021": { "name": "Consulting rooms, 12 Harley Street", "settings": ["outpatient"], "insurers": ["bupa", "axa_health", "aviva", "vitality", "wpa", "allianz", "bupa_global", "nhs_england"] },
+    "SITE-087": { "name": "St Aldhelm Day Surgery Unit", "settings": ["outpatient", "day_case"], "insurers": ["bupa", "axa_health", "vitality", "wpa", "nhs_england"] },
+    "SITE-134": { "name": "The Meadowbank Hospital", "settings": ["outpatient", "day_case", "inpatient"], "insurers": ["bupa", "axa_health", "aviva", "vitality", "nhs_england"] }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "invoice_number": "INV-2026-0200",
+  "invoice_date": "2026-07-04",
+  "currency": "GBP",
+  "practice": {
+    "name": "Harley Street Practice Ltd",
+    "address_line1": "12 Harley Street, London",
+    "postcode": "W1G 9PF"
+  },
+  "patient": {
+    "title": "Ms",
+    "first_name": "Amelia",
+    "surname": "Hart",
+    "date_of_birth": "1981-03-14",
+    "sex": "F",
+    "address_line1": "4 Elm Grove, London",
+    "postcode": "SW1A 1AA",
+    "nhs_number": "943 476 5919"
+  },
+  "policy": {
+    "insurer_id": "bupa",
+    "membership_number": "BUP12345678",
+    "pre_authorisation": "12345678"
+  },
+  "provider": {
+    "specialist_name": "Dr T. Okafor",
+    "gmc_number": "4479761",
+    "payee_provider_id": "PP-4402",
+    "treatment_site_id": "SITE-021"
+  },
+  "episode": {
+    "care_setting": "outpatient",
+    "treatment_date": "2026-06-20",
+    "admission_date": null,
+    "discharge_date": null,
+    "diagnoses": ["M17.1"],
+    "procedures": ["0101A"]
+  },
+  "lines": [
+    {
+      "service_code": "CONS-INIT",
+      "description": "Initial consultation",
+      "quantity": 1,
+      "unit_fee": 250.0,
+      "vat_rate": 0
+    }
+  ],
+  "totals": { "net": 250.0, "vat": 0, "gross": 250.0 }
+}

@@ -10,7 +10,11 @@ load_dotenv()
 # Import our Xero client helper
 from xero_client import get_accounting_api, test_connection
 
+# Deterministic medical-invoice validation engine (see validation/README in schema.json)
+from validation.api import router as validation_router
+
 app = FastAPI(title="HealthCode Connect API POC")
+app.include_router(validation_router)
 
 # Enable CORS so the frontend can call this backend easily
 app.add_middleware(
