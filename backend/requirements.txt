@@ -8,6 +8,10 @@ google-auth-oauthlib
 PyPDF2
 requests
 jsonschema>=4.21
+pypdf>=4.2            # invoice PDF text extraction
+fpdf2>=2.7            # demo sample-PDF generation
+python-multipart>=0.0.9  # FastAPI file uploads
 
 # dev/test
 pytest>=8.0
+httpx>=0.27,<0.28  # fastapi TestClient; 0.28 drops the app= kwarg that starlette 0.27 uses

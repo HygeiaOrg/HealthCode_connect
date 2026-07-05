@@ -17,6 +17,39 @@ import {
 const API = import.meta.env.VITE_API_URL as string | undefined
 export const MOCK_MODE = !API
 
+// The PDF check always talks to the Python engine; in mock mode it targets the
+// local backend (override with VITE_VALIDATION_URL if port 8000 is taken).
+const VALIDATION_BASE =
+  API ?? (import.meta.env.VITE_VALIDATION_URL as string | undefined) ?? 'http://localhost:8000'
+
+export interface UploadIssue {
+  field: string
+  error: string
+  solution: string
+  severity: 'error' | 'warning'
+  rule: string
+  path: string
+}
+
+export interface UploadResult {
+  filename: string
+  valid: boolean
+  parsed: {
+    patient?: { first_name?: string; surname?: string }
+    policy?: { insurer_id?: string }
+    totals?: { net?: number }
+  } | null
+  issues: UploadIssue[]
+}
+
+export async function uploadInvoicePdf(file: File): Promise<UploadResult> {
+  const form = new FormData()
+  form.append('file', file)
+  const res = await fetch(`${VALIDATION_BASE}/invoices/upload`, { method: 'POST', body: form })
+  if (!res.ok) throw new Error(`upload failed: ${res.status}`)
+  return res.json() as Promise<UploadResult>
+}
+
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(`${API}${path}`)
   if (!res.ok) throw new Error(`${path} failed: ${res.status}`)

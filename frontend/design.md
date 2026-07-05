@@ -82,7 +82,7 @@ Personality: calm, precise, bank-grade. The product earns trust by showing dated
 
 ## Colors
 
-The palette is the validated data-viz reference set; both modes passed the six-check validator on 2026-07-04 (worst adjacent CVD ΔE 47.2 light, 41.3 dark).
+The palette is the validated data-viz reference set, light mode only by product decision (4 July): the app commits to the white, blue and green world of the reconciliation screens doctors already use, so white surfaces on a cool light page, blue actions, soft-green matched results (`matchsoft`). The light palette passed the six-check validator on 2026-07-04 (worst adjacent CVD ΔE 47.2). The dark token column in the front matter is retained for reference but is not wired up.
 
 Roles, not raw hex, everywhere. The two income streams have fixed identities: NHS is always `series-nhs` (blue), private clinic is always `series-private` (aqua). A filter that hides one series never repaints the other.
 
@@ -96,7 +96,7 @@ One family, the system sans, at every size including the hero figure. Money colu
 
 ## Layout & Spacing
 
-- One chrome layer: a fixed 216px left sidebar (OpenClaw Control-UI structure): brand strip, grouped nav with uppercase section labels (Work: Overview, Invoices, Fix queue; Insight: Compare; System: Settings), a live stuck-count badge on Fix queue, and connection status in the footer. Still five destinations; every product with a 12-plus-item rail scored poorly on findability (C02, C05, C17).
+- One chrome layer: a fixed 216px left sidebar (OpenClaw Control-UI structure): brand strip, grouped nav with uppercase section labels (Work: Invoices, Fix queue), a live stuck-count badge on Fix queue, and connection status in the footer. Two destinations only, by product decision: the invoice database and the fixing workflow are the product; every product with a 12-plus-item rail scored poorly on findability (C02, C05, C17).
 - Content column capped at 1240px, 24px gaps between sections, cards on the `page` plane with `surface` fill.
 - The Overview grid: hero cashflow card full-width, then a three-card KPI row, then the pipeline bar, then the action queue. The hero is never below the fold.
 - Responsive: below 900px the sidebar collapses to a horizontal strip and content goes single column. No separate mobile app for the MVP.
@@ -117,6 +117,7 @@ Cards at 10px radius, controls at 8px, chips fully rounded. Chart marks are thin
 - Status chip. Color plus icon plus label, always all three (C20). Stage chips add days-in-stage when older than 7 days: "With insurer · 12d", following "Overdue 47 days" (C17). Never a bare dot (C01, C06, C22).
 - Invoice row. Number, patient ref, payer chip (NHS or insurer name), amount, stage chip, expected date, inline action (Fix, Chase, or View). The row expands in place to the dated timeline (C01): Draft → At Medserv → With insurer → Paid, each stage with a timestamp, the current stage pulsing; rejection and insurer-query nodes branch where they happened. Nothing dead-ends at "collected" (C21, C22).
 - Validation panel. Pre-submission checks as named rows with pass/fail chips and one-line explanations (C10). Failures use the Field / Error / Solution triplet (C22). A live counter gates submission: the Submit button stays disabled until "0 issues remaining" (C02).
+- PDF check. A dropzone on the Fix queue: an invoice PDF is parsed by label and run through the deterministic Python engine; a passing file gets a soft-green matched banner (the reconciliation-screen pattern), a failing one gets the Field / Error / Solution panel. Sample PDFs in backend/samples/.
 - Fix queue. The orchestration centre: every stuck invoice matches exactly one deterministic rule (rejected, insurer query, shortfall, past insurer SLA, stalled at Medserv, never submitted; checked in that order) and each rule prescribes one action. Groups carry a severity accent and £ total; rows sort by money at stake; the rulebook and per-insurer SLA table are printed on Settings. Grouping errors by fix type is the CareCloud inbox pattern (C12); the gate-until-zero idea is Cerner's (C02).
 - Action queue. "Needs attention" list with counts per reason (Rejected 2, Missing data 1, Stale 14d+ 3), each row carrying its inline fix action (C10, C15, C22).
 - Compare view. Private versus NHS as paired series in the two fixed hues: dual-series bars for monthly income (C19), side-by-side aging buckets (C14), rejection rate and payment velocity per payer (C09). Comparison date ranges spelled out in plain text under the title (C19).
