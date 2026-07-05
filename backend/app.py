@@ -15,6 +15,7 @@ load_dotenv()
 
 # Import our Xero client helper
 from xero_client import get_accounting_api, test_connection
+import invoice_store
 import xero_sync
 
 class ClaimProcedure(BaseModel):
@@ -35,6 +36,9 @@ class ClaimRequest(BaseModel):
 class PaymentRequest(BaseModel):
     amount: float
     reference: Optional[str] = None
+
+class ReplyRequest(BaseModel):
+    message: str
 
 # Deterministic medical-invoice validation engine (see validation/README in schema.json)
 from validation.api import router as validation_router
@@ -234,25 +238,35 @@ def _fetch_xero_invoice(api, invoice_id: str):
     return res.invoices[0]
 
 
+def _xero_invoices_or_empty() -> list:
+    """Mapped Xero ACCREC invoices; empty when Xero is unreachable."""
+    try:
+        return xero_sync.fetch_invoices(xero_sync.get_api())
+    except Exception:
+        return []
+
+
 @app.get("/invoices")
 def list_invoices(payer_type: Optional[str] = None, status: Optional[str] = None,
                   q: Optional[str] = None):
     """
-    Contract GET /invoices. Live Xero data when reachable, seeds.json otherwise.
-    frontend/src/api/client.ts expects a bare Invoice[] (not an envelope), so
-    provenance travels per-invoice in the contract's "source" field
-    ("xero" | "seed").
+    Contract GET /invoices: mapped Xero invoices first (source "xero") when
+    Xero is reachable, then the seed store (source "seed") so the demo stays
+    rich either way. frontend/src/api/client.ts expects a bare Invoice[] (not
+    an envelope), so provenance travels per-invoice in the "source" field.
     """
-    try:
-        records = xero_sync.fetch_invoices(xero_sync.get_api())
-    except Exception:
-        records = xero_sync.load_seeds()
-    return xero_sync.filter_invoices(records, payer_type=payer_type, status=status, q=q)
+    xero_records = xero_sync.filter_invoices(
+        _xero_invoices_or_empty(), payer_type=payer_type, status=status, q=q
+    )
+    return xero_records + invoice_store.list_invoices(payer_type=payer_type, status=status, q=q)
 
 
 @app.get("/invoices/{invoice_id}")
 def get_invoice(invoice_id: str):
-    """Contract GET /invoices/{id}: Xero first, seeds fallback, else 404."""
+    """Contract GET /invoices/{id}: seed store for its own ids, Xero otherwise."""
+    record = invoice_store.get(invoice_id)
+    if record is not None:
+        return record
     try:
         api = xero_sync.get_api()
         res = api.get_invoice(xero_sync.TENANT, invoice_id)
@@ -260,10 +274,13 @@ def get_invoice(invoice_id: str):
             return xero_sync.map_invoice(res.invoices[0])
     except Exception:
         pass
-    for record in xero_sync.load_seeds():
-        if invoice_id in (record.get("id"), record.get("invoice_number")):
-            return record
     raise HTTPException(status_code=404, detail="invoice not found")
+
+
+@app.get("/analytics/summary")
+def analytics_summary():
+    """Contract GET /analytics/summary over the same merged list as GET /invoices."""
+    return invoice_store.summarize(_xero_invoices_or_empty() + invoice_store.list_invoices())
 
 
 @app.post("/invoices/{invoice_id}/record-payment")
@@ -305,7 +322,9 @@ def record_payment(invoice_id: str, body: PaymentRequest):
 
 @app.post("/invoices/{invoice_id}/submit")
 def submit_invoice(invoice_id: str):
-    """Contract draft -> at_medserv: Xero DRAFT -> SUBMITTED."""
+    """Contract draft -> at_medserv: seed-store transition, or Xero DRAFT -> SUBMITTED."""
+    if invoice_store.get(invoice_id) is not None:
+        return invoice_store.submit_draft(invoice_id)
     try:
         api = xero_sync.get_api()
     except Exception:
@@ -323,6 +342,63 @@ def submit_invoice(invoice_id: str):
     elif inv.status != "SUBMITTED":
         raise HTTPException(status_code=422, detail=f"invoice is {inv.status}, not a draft")
     return xero_sync.map_invoice(inv)
+
+
+def _xero_note_action(invoice_id: str, details: str) -> dict:
+    """Chase/reply/resubmit on a Xero invoice have no status transition of
+    their own; the real-world equivalent is an audit note on the invoice's
+    History tab. Writes the note and returns the re-mapped invoice."""
+    try:
+        api = xero_sync.get_api()
+    except Exception:
+        raise HTTPException(status_code=502, detail="Xero is not reachable")
+    _fetch_xero_invoice(api, invoice_id)
+    try:
+        xero_sync.add_history(api, invoice_id, details)
+        inv = api.get_invoice(xero_sync.TENANT, invoice_id).invoices[0]
+    except Exception:
+        raise HTTPException(status_code=502, detail="Xero error while noting the invoice history")
+    return xero_sync.map_invoice(inv)
+
+
+@app.post("/invoices/{invoice_id}/resubmit")
+def resubmit_invoice(invoice_id: str):
+    """Fix-queue: rejected -> at_medserv with validation issues cleared."""
+    if invoice_store.get(invoice_id) is not None:
+        return invoice_store.resubmit(invoice_id)
+    return _xero_note_action(invoice_id, "Resubmitted to Medserv after validation fixes")
+
+
+@app.post("/invoices/{invoice_id}/reply")
+def reply_invoice(invoice_id: str, body: ReplyRequest):
+    """Fix-queue: answers an insurer query, insurer_query -> with_insurer."""
+    if invoice_store.get(invoice_id) is not None:
+        return invoice_store.reply(invoice_id)
+    return _xero_note_action(invoice_id, f"Reply sent to insurer query: {body.message}")
+
+
+@app.post("/invoices/{invoice_id}/chase")
+def chase_invoice(invoice_id: str):
+    """Fix-queue: records a chaser to the insurer; sets last_chased_at."""
+    if invoice_store.get(invoice_id) is not None:
+        return invoice_store.chase(invoice_id)
+    return _xero_note_action(invoice_id, "Payment chaser sent to insurer")
+
+
+@app.post("/invoices/{invoice_id}/resolve")
+def resolve_invoice(invoice_id: str):
+    """Fix-queue: clears a shortfall balance (amount_due -> 0) on a seed invoice."""
+    if invoice_store.get(invoice_id) is not None:
+        return invoice_store.resolve(invoice_id)
+    try:
+        api = xero_sync.get_api()
+    except Exception:
+        raise HTTPException(status_code=502, detail="Xero is not reachable")
+    _fetch_xero_invoice(api, invoice_id)
+    raise HTTPException(
+        status_code=422,
+        detail="writing off a Xero invoice needs a credit note; record it in Xero",
+    )
 
 
 @app.get("/xero/health")

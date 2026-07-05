@@ -10,7 +10,9 @@ import json
 import os
 import uuid
 
-from xero_python.accounting import Account, Contact, Contacts, Invoice, Invoices, Payment
+from xero_python.accounting import (
+    Account, Contact, Contacts, HistoryRecord, HistoryRecords, Invoice, Invoices, Payment,
+)
 
 from validation.engine import load_dictionaries, validate_invoice
 
@@ -238,6 +240,18 @@ def map_invoice(inv) -> dict:
 def fetch_invoices(api) -> list[dict]:
     res = api.get_invoices(TENANT, where='Type=="ACCREC"', order="Date DESC", page=1)
     return [map_invoice(i) for i in (res.invoices if res and res.invoices else [])]
+
+
+def add_history(api, invoice_id: str, details: str) -> None:
+    """Attach a note to the invoice's History & Notes tab in Xero.
+
+    Chase/reply/resubmit have no status transition of their own in Xero, so
+    the audit note is their real-world equivalent.
+    """
+    records = HistoryRecords(history_records=[HistoryRecord(details=details[:250])])
+    api.create_invoice_history(
+        TENANT, invoice_id, history_records=records, idempotency_key=str(uuid.uuid4())
+    )
 
 
 # ---------- seeds fallback ----------

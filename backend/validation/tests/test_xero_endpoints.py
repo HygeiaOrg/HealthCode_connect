@@ -252,9 +252,12 @@ def test_list_maps_every_xero_status_to_pipeline_status(install):
     assert res.status_code == 200
     body = res.json()
     assert isinstance(body, list)  # client.ts expects bare Invoice[], no envelope
-    got = {r["id"]: r["pipeline_status"] for r in body}
+    # Merged list: the Xero block comes first, seed-store invoices after it.
+    xero_rows = body[:len(XERO_STATUS_TO_PIPELINE)]
+    assert all(r["source"] == "seed" for r in body[len(XERO_STATUS_TO_PIPELINE):])
+    got = {r["id"]: r["pipeline_status"] for r in xero_rows}
     assert got == {inv.invoice_id: want for inv, want in XERO_STATUS_TO_PIPELINE}
-    for r in body:
+    for r in xero_rows:
         assert r["source"] == "xero"
         assert {"invoice_number", "payer_type", "insurer_name", "patient_ref", "total",
                 "amount_due", "middleman_fee", "currency", "issued_date",
