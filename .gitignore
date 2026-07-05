@@ -9,3 +9,5 @@ build/
 .venv/
 backend/token.json
 backend/client_secret.json
+backend/.watcher_state.json
+backend/validation/.dedup_index.json
