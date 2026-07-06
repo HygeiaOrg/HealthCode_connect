@@ -27,11 +27,16 @@ def get_xero_client() -> ApiClient:
     # 1. Fetch token explicitly
     client = BackendApplicationClient(client_id=XERO_CLIENT_ID)
     oauth = OAuth2Session(client=client)
+    # Scopes must be a subset of what the Custom Connection has enabled in the
+    # Xero developer portal. record-payment needs accounting.settings(.read)
+    # for the payment-account lookup; override without a code change via e.g.
+    # XERO_SCOPES="accounting.transactions accounting.contacts accounting.settings.read"
+    scopes = os.getenv("XERO_SCOPES", "accounting.transactions accounting.contacts").split()
     token = oauth.fetch_token(
         token_url="https://identity.xero.com/connect/token",
         client_id=XERO_CLIENT_ID,
         client_secret=XERO_CLIENT_SECRET,
-        scope=["accounting.transactions", "accounting.contacts"]
+        scope=scopes
     )
     
     # 2. Configure ApiClient

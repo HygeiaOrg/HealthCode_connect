@@ -1,18 +1,19 @@
-/* Tokens from design.md. Roles, not raw hex, everywhere below the token block. */
+/* Tokens from design.md. Light-only by decision: the product commits to the
+   white / blue / green world of the reconciliation screens doctors already
+   know (white cards, blue actions, soft-green matched rows). */
 :root {
-  --page: #f9f9f7;
-  --surface: #fcfcfb;
+  --page: #f2f4f6;
+  --surface: #ffffff;
   --ink: #0b0b0b;
-  --ink2: #52514e;
-  --ink3: #898781;
-  --line: #e1e0d9;
-  --ring: rgba(11, 11, 11, 0.1);
+  --ink2: #4f545a;
+  --ink3: #86909a;
+  --line: #e2e6ea;
+  --ring: rgba(11, 11, 11, 0.09);
   --brand: #2a78d6;
   --nhs: #2a78d6;
   --private: #1baf7a;
   --stage-draft: #86b6ef;
-  --stage-semble: #5598e7;
-  --stage-healthcode: #2a78d6;
+  --stage-medserv: #2a78d6;
   --stage-insurer: #1c5cab;
   --paid: #0ca30c;
   --overdue: #fab219;
@@ -21,28 +22,10 @@
   --good-text: #006300;
   --brandsoft: rgba(42, 120, 214, 0.09);
   --aquasoft: rgba(27, 175, 122, 0.1);
+  --matchsoft: #d6f1e1;
   --critsoft: rgba(208, 59, 59, 0.08);
-  --warnsoft: rgba(250, 178, 25, 0.14);
+  --warnsoft: rgba(250, 178, 25, 0.16);
   --shadow: 0 1px 2px rgba(11, 11, 11, 0.05);
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page: #0d0d0d;
-    --surface: #1a1a19;
-    --ink: #ffffff;
-    --ink2: #c3c2b7;
-    --ink3: #898781;
-    --line: #2c2c2a;
-    --ring: rgba(255, 255, 255, 0.1);
-    --brand: #3987e5;
-    --nhs: #3987e5;
-    --private: #199e70;
-    --good-text: #0ca30c;
-    --critsoft: rgba(230, 103, 103, 0.12);
-    --aquasoft: rgba(25, 158, 112, 0.14);
-    --brandsoft: rgba(57, 135, 229, 0.13);
-    --warnsoft: rgba(250, 178, 25, 0.12);
-  }
 }
 
 * { box-sizing: border-box; }
@@ -134,7 +117,6 @@ button { font: inherit; }
 .chip.paid { background: var(--aquasoft); color: var(--good-text); }
 .chip.rejected { background: var(--critsoft); color: var(--rejected); }
 .chip.overdue { background: var(--warnsoft); color: #8a5b00; }
-@media (prefers-color-scheme: dark) { .chip.overdue { color: var(--overdue); } }
 .chip.payer-nhs { background: var(--brandsoft); color: var(--nhs); }
 .chip.payer-private { background: var(--aquasoft); color: var(--good-text); }
 .chip.muted { background: transparent; border: 1px solid var(--line); color: var(--ink3); }
@@ -218,7 +200,6 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width
 .queue-count { font-weight: 650; font-variant-numeric: tabular-nums; min-width: 20px; text-align: center; border-radius: 6px; padding: 1px 7px; }
 .queue-count.crit { background: var(--critsoft); color: var(--rejected); }
 .queue-count.warn { background: var(--warnsoft); color: #8a5b00; }
-@media (prefers-color-scheme: dark) { .queue-count.warn { color: var(--overdue); } }
 .queue-count.info { background: var(--brandsoft); color: var(--brand); }
 .queue-item .qtext { flex: 1; color: var(--ink2); }
 .queue-item .qtext b { color: var(--ink); font-weight: 600; }
@@ -319,7 +300,6 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width
 .chip.sev-critical { background: var(--critsoft); color: var(--rejected); }
 .chip.sev-serious { background: rgba(236, 131, 90, 0.15); color: var(--stuck); }
 .chip.sev-warning { background: var(--warnsoft); color: #8a5b00; }
-@media (prefers-color-scheme: dark) { .chip.sev-warning { color: var(--overdue); } }
 .chip.sev-info { background: var(--brandsoft); color: var(--brand); }
 .queue-count.serious { background: rgba(236, 131, 90, 0.15); color: var(--stuck); }
 
@@ -340,3 +320,35 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width
 .fix-btn:hover { filter: brightness(1.1); }
 .fix-btn:disabled { opacity: 0.5; cursor: default; }
 .reply-box { width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--page); color: var(--ink); font: inherit; font-size: 12.5px; padding: 8px 10px; margin-top: 8px; min-height: 50px; }
+
+/* ---------- PDF check (upload) ---------- */
+.dropzone {
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  padding: 26px 20px;
+  text-align: center;
+  color: var(--ink2);
+  cursor: pointer;
+  background: var(--surface);
+  transition: border-color 0.12s, background 0.12s;
+}
+.dropzone.drag { border-color: var(--brand); background: var(--brandsoft); }
+.dropzone b { color: var(--brand); }
+.dropzone input { display: none; }
+.result-ok {
+  background: var(--matchsoft);
+  border: 1px solid rgba(12, 163, 12, 0.28);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--good-text);
+  font-weight: 600;
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.result-ok .sub { font-weight: 400; font-size: 12.5px; color: var(--ink2); }
+.result-meta { font-size: 12.5px; color: var(--ink2); margin-top: 8px; }
+.rulebook summary { cursor: pointer; font-size: 12.5px; font-weight: 600; color: var(--brand); }
+.rulebook { margin-top: 14px; }
