@@ -3,10 +3,11 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { api } from '../api/client'
 import type { Invoice } from '../api/types'
 import type { Triage, TriageGroup } from '../lib/triage'
-import { groupTriage } from '../lib/triage'
+import { BLOCKERS, DEFAULT_SLA, SLA_DAYS, groupTriage } from '../lib/triage'
 import { gbp } from '../lib/format'
 import { EmptyState, PayerChip, Skeleton } from '../components/ui'
 import { ValidationPanel } from '../components/invoices'
+import { UploadCard } from '../components/upload'
 
 function useFixAction() {
   const qc = useQueryClient()
@@ -97,9 +98,12 @@ export default function FixQueue() {
     <>
       <h1 className="page-title">Fix queue</h1>
       <p className="page-sub">
-        Every stuck invoice, matched to one rule and one next action. The rules are deterministic; read them on
-        the Settings page.
+        Every stuck invoice, matched to one rule and one next action. Check new invoices here before they leave
+        the practice; the rulebook below shows exactly how decisions are made.
       </p>
+
+      <UploadCard />
+      <div className="section-gap" />
 
       {count === 0 ? (
         <div className="card">
@@ -133,6 +137,24 @@ export default function FixQueue() {
           ))}
         </>
       )}
+
+      <details className="rulebook card section-gap">
+        <summary>How triage decides: the rulebook and insurer SLAs</summary>
+        <div className="section-gap" style={{ marginTop: 10 }}>
+          {BLOCKERS.map((b, i) => (
+            <div className="queue-item" key={b.kind}>
+              <span className="queue-count info">{i + 1}</span>
+              <span className="qtext"><b>{b.title}</b> · {b.rule}</span>
+              <span className={`chip sev-${b.severity}`}>{b.severity}</span>
+            </div>
+          ))}
+          <p className="footnote" style={{ marginTop: 14 }}>
+            Payment SLAs, in days from reaching the insurer (unlisted insurers get {DEFAULT_SLA}):{' '}
+            {Object.entries(SLA_DAYS).map(([name, days]) => `${name} ${days}`).join(' · ')}. Rules are checked
+            top to bottom; an invoice matches at most one.
+          </p>
+        </div>
+      </details>
     </>
   )
 }
