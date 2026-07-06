@@ -15,6 +15,7 @@ load_dotenv()
 
 # Import our Xero client helper
 from xero_client import get_accounting_api, test_connection
+from healthcode_client import submit_to_healthcode
 import invoice_store
 import xero_sync
 
@@ -165,11 +166,12 @@ def submit_claim(request: ClaimRequest):
         return JSONResponse(status_code=422, content={"valid": False, "issues": issues})
 
     try:
-        accounting_api = xero_sync.get_api()
-
-        # 1. (Future Phase) Submit to Healthcode API and get a HC reference
-        healthcode_ref = "HC-PENDING"
-
+        accounting_api = get_accounting_api()
+        
+        # 1. Phase 2: Submit to Healthcode API and get a HC reference
+        hc_response = submit_to_healthcode(request)
+        healthcode_ref = hc_response["reference"]
+        
         # 2. Mirror into Xero as an Invoice
         contact = xero_sync.upsert_contact(
             accounting_api, request.insurance_company_name, request.insurer_email
@@ -211,8 +213,9 @@ def submit_claim(request: ClaimRequest):
         if created_invoices and created_invoices.invoices:
             created_inv = created_invoices.invoices[0]
             return {
-                "message": "Claim successfully mirrored to Xero",
-                "healthcode_status": "pending_implementation",
+                "message": "Claim successfully submitted to Healthcode and mirrored to Xero",
+                "healthcode_status": hc_response["status"],
+                "healthcode_reference": healthcode_ref,
                 "xero_invoice_id": created_inv.invoice_id,
                 "xero_invoice_number": created_inv.invoice_number
             }
